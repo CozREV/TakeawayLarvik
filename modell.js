@@ -37,8 +37,7 @@ const modell = {
                     year: 0
                 }
             }],
-        restaurants: [
-            {
+        restaurants: [{
                 id: 1,
                 Name: "",
                 Logo: "",
@@ -53,8 +52,7 @@ const modell = {
                     }
                 }
             }],
-        products: [
-            {
+        products: [{
                 id: 1,
                 restaurantId: 1,
                 title: "",
@@ -63,7 +61,7 @@ const modell = {
                 picture: "",
                 allergiesId: [], 
                 ingredients: "",
-                drinks: [{id: 1, name: "", price: 49}],
+                drinks: [{id: 1, name: "", price: null}],
                 rating: [], 
                 stats: {
                     week: 0,
@@ -89,8 +87,7 @@ const modell = {
             {id: 13, name: "lupin"},
             {id: 14, name: "molluscs"}
         ],
-        orders: [
-            {
+        orders: [{
                 userId: 1,
                 restaurantId: 1,
                 orderNr: "",
@@ -107,16 +104,14 @@ const modell = {
                 ],
                 totalPrice: ""
             }],
-        userRating: [
-            {
+        userRating: [{
                 id: 1,
                 userId: 1,
                 productId: 1,
                 score: 4,
                 comment: "",
                 date: "26/03/2026"
-            }
-        ],
+            }],
         paymentMethod: ["Visa", "Vipps", "Google Pay"]
     }
 }
