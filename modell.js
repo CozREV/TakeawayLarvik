@@ -53,11 +53,11 @@ const modell = {
             id: 1,
             restaurantId: 1,
             title: "",
-            picture: "",
+            picture: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWFiemx3OThmY29peWkzbzZncTE1dms1Zm5oZ2k3OTVqMnFodzFqbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dZRlFW1sbFEpG/giphy.gif",
             price: 149,
             allergiesId: [],
             ingredients: "",
-            addDrink: [{id: 1, name: "", price: 49}],
+            addDrink: [{id: 1, name: "Cola", price: 49}],
             ratings: [],
             stats: {
                 week: 0,
@@ -111,6 +111,7 @@ const modell = {
 }
 
 console.log(modell.data.paymentMethod[0])
+console.log(modell.data.products[0].addDrink[0].name)
 
 
 
