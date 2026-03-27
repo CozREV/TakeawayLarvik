@@ -1,10 +1,56 @@
 const modell = {
     app: {
         currentView: "Home",
-        logIn: false
+        logInId: null
     },
+
     viewstate: {
+        logIn: {
+            username: null,
+            password: null
+        },
+        createUser: {
+            name: null,
+            email: null,
+            phoneNr: null,
+            password: null,
+            hasAdmin: null,
+            allergiesId: []
+        },
+        createRestaurant: {
+            id: null,
+            restName: null,
+            restLogo: null,
+            desc: null,
+            offers: [],
+        },
+        createProduct: {
+            id: 1,
+            restaurantId: 1,
+            title: null,
+            picture: null,
+            price: 149,
+            allergiesId: [],
+            ingredients: "",
+            addDrink: null,
+        },
+        newOrder: {
+            userId: null,
+            restaurantId: null,
+            orderNr: null,
+            date: null,
+            pickupTime: null,
+            completed: null,
+            product: [],
+            totalPrice: null
+        },
         cart: [],
+        cartProduct: {
+            productId: null,
+            quantity: null,
+            comment: null,
+            drinkId: []
+        },
         selectRestaurant: null,
         selectProduct: null,
         searchBar: "",
@@ -20,12 +66,14 @@ const modell = {
             comment: ""
         }
     },
+
     data: {
         user: [{
             id: 1,
             name: "øyvind",
             email: "øy@vind.com",
             phoneNr: "123456789",
+            password: "8972",
             hasAdmin: false,
             allergiesId: [1, 3, 5],
             stats: {
@@ -57,7 +105,7 @@ const modell = {
             price: 149,
             allergiesId: [],
             ingredients: "",
-            addDrink: [{id: 1, name: "Cola", price: 49}],
+            drinkId: [0],
             ratings: [],
             stats: {
                 week: 0,
@@ -65,6 +113,11 @@ const modell = {
                 year: 0
             }
         }],
+        drinks: [
+            {id: 1, name: "Cola", price: 89}
+            {id: 2, name: "Kola", price: 59}
+            {id: 3, name: "Koola", price: 29}
+        ],
 
         //EU allergy list EFSA
         allergies: [
@@ -94,7 +147,6 @@ const modell = {
                 productId: 1,
                 quantity: 1,
                 comment: "",
-                drinkId: ""
             }],
             totalPrice: ""
         }],
