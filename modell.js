@@ -1,122 +1,124 @@
 const modell = {
     app: {
-        currentView: "home",
+        currentView: "Home",
         logIn: false
     },
-
     viewstate: {
         cart: [],
         selectRestaurant: null,
         selectProduct: null,
-        search: "",
+        searchBar: "",
         filter: {
             sort: null,
             maxPrice: null,
-            allergyFilter: true
+            discount: null,
+            allergyFilter: true,
         },
-        statFilter: "week",
+        statsFilter: "week",
         order: {
             time: null,
             comment: ""
-        } 
+        }
     },
-
     data: {
         user: [{
-                id: 1,
-                name: "øyvind",
-                email: "øy@vind.com",
-                phoneNr: "123456789",
-                role: "customer",
-                allergiesId: [1, 3, 9],
-                orderHistory: [],     
-                rating: [],         
-                stats: {
-                    week: 0,
-                    month: 0,
-                    year: 0
+            id: 1,
+            name: "øyvind",
+            email: "øy@vind.com",
+            phoneNr: "123456789",
+            hasAdmin: false,
+            allergiesId: [1, 3, 5],
+            stats: {
+                week: 0,
+                month: 0,
+                year: 0
+            }
+        }],
+        restaurant: [{
+            id: 1,
+            restName: "",
+            restLogo: "",
+            desc: "",
+            offers: [],
+            stats: {
+                SalesByHour: {},
+                topProducts: {
+                    week: [],
+                    month: [],
+                    year: []
                 }
-            }],
-        restaurants: [{
-                id: 1,
-                Name: "",
-                Logo: "",
-                desc: "",
-                offer: [],
-                stats: {
-                    salesByHour: {},
-                    topProducts: {
-                        week: [],
-                        month: [],
-                        year: []
-                    }
-                }
-            }],
+            }
+        }],
         products: [{
-                id: 1,
-                restaurantId: 1,
-                title: "",
-                desc: "",
-                price: 149,
-                picture: "",
-                allergiesId: [], 
-                ingredients: "",
-                drinks: [{id: 1, name: "", price: null}],
-                rating: [], 
-                stats: {
-                    week: 0,
-                    month: 0,
-                    year: 0
-                }
-            }],
+            id: 1,
+            restaurantId: 1,
+            title: "",
+            picture: "",
+            price: 149,
+            allergiesId: [],
+            ingredients: "",
+            addDrink: [{id: 1, name: "", price: 49}],
+            ratings: [],
+            stats: {
+                week: 0,
+                month: 0,
+                year: 0
+            }
+        }],
 
-        // EU allergy list
+        //EU allergy list EFSA
         allergies: [
-            {id: 1, name: "nuts"},
-            {id: 2, name: "glucose"},
-            {id: 3, name: "lactose"},
-            {id: 4, name: "egg"},
-            {id: 5, name: "fish"},
-            {id: 6, name: "shellfish"},
-            {id: 7, name: "soya"},
-            {id: 8, name: "wheat"},
-            {id: 9, name: "celery"},
-            {id: 10, name: "mustard"},
-            {id: 11, name: "sesame seed"},
-            {id: 12, name: "sulphur dioxide"},
-            {id: 13, name: "lupin"},
-            {id: 14, name: "molluscs"}
+                {id: 1, name: "Nuts"},
+                {id: 2, name: "Glucose"},
+                {id: 3, name: "Lactose"},
+                {id: 4, name: "Egg"},
+                {id: 5, name: "Fish"},
+                {id: 6, name: "Crustaceans"},
+                {id: 7, name: "Soy"},
+                {id: 8, name: "Wheat"},
+                {id: 9, name: "Celery"},
+                {id: 10, name: "Mustard"},
+                {id: 11, name: "Sesame seed"},
+                {id: 12, name: "Sulphur dioxide"},
+                {id: 13, name: "Lupin"},
+                {id: 14, name: "Molluscs"}
         ],
         orders: [{
-                userId: 1,
-                restaurantId: 1,
-                orderNr: "",
-                date: "26/03/2026",
-                pickupTime: "12:30",
-                completed: false,
-                items: [
-                    {
-                        productId: 1,
-                        quantity: 1,
-                        comment: "",
-                        drinkId: ""
-                    }
-                ],
-                totalPrice: ""
-            }],
-        userRating: [{
-                id: 1,
-                userId: 1,
+            userId: 1,
+            restaurantId: 1,
+            orderNr: "",
+            date: "26/03/2026",
+            pickupTime: "12.30",
+            completed: false,
+            product: [{
                 productId: 1,
-                score: 4,
+                quantity: 1,
                 comment: "",
-                date: "26/03/2026"
+                drinkId: ""
             }],
+            totalPrice: ""
+        }],
+        userRatings: [{
+            id: 1,
+            userId: 1,
+            productId: 1,
+            score: 1,
+            comment: "",
+            date: "26/03/2026"
+        }],
         paymentMethod: ["Visa", "Vipps", "Google Pay"]
     }
 }
 
+console.log(modell.data.paymentMethod[0])
 
+
+
+
+
+
+
+// BeckaBaguet shop kode
 
 /* const modell = {
     app: {
