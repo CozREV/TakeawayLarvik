@@ -162,10 +162,6 @@ const modell = {
     }
 }
 
-console.log(modell.data.paymentMethod[0])
-console.log(modell.data.products[0].addDrink[0].name)
-
-
 
 
 
