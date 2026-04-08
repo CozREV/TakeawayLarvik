@@ -2,9 +2,9 @@ updateView()
 function updateView(){
     let html = ''
     if(modell.app.currentView === "home"){
-        html = homepage()
+        html = homeView();
     }
-    document.getElementById("main").innerHTML = html
+    document.getElementById("main").innerHTML = html;
 }
 
 
