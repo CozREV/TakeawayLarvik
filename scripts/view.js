@@ -1,7 +1,7 @@
 updateView()
 function updateView(){
     let html = ''
-    if(modell.app.currentView === "homepppage"){
+    if(modell.app.currentView === "home"){
         html = homepage()
     }
     document.getElementById("main").innerHTML = html
