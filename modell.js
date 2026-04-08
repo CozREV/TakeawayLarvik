@@ -114,8 +114,8 @@ const modell = {
             }
         }],
         drinks: [
-            {id: 1, name: "Cola", price: 89}
-            {id: 2, name: "Kola", price: 59}
+            {id: 1, name: "Cola", price: 89},
+            {id: 2, name: "Kola", price: 59},
             {id: 3, name: "Koola", price: 29}
         ],
 
@@ -161,10 +161,6 @@ const modell = {
         paymentMethod: ["Visa", "Vipps", "Google Pay"]
     }
 }
-
-console.log(modell.data.paymentMethod[0])
-console.log(modell.data.products[0].addDrink[0].name)
-
 
 
 
