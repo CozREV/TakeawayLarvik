@@ -1,3 +1,4 @@
+
 updateView()
 function updateView() {
     app.innerHTML = /*HTML*/`
@@ -26,3 +27,10 @@ function updateView() {
 }
 
 updateView()
+
+function homeView(){
+    return /*html*/ `
+    <div>larvik takeawayyyy<div>
+    `
+}
+
