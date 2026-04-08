@@ -4,12 +4,8 @@ function updateView(){
     if(modell.app.currentView === "home"){
         html = homeView();
     }
+    if else(modell.app.currentView === "resturant"){
+        html = resturnatView();
+    }
     document.getElementById("main").innerHTML = html;
-}
-
-
-function homeView(){
-    return /*html*/ `
-    <div>larvik takeawayyyy<div>
-    `
 }
