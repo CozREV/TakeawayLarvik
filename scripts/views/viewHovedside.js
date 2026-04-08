@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 updateView()
 function updateView() {
@@ -34,3 +35,5 @@ function homeView(){
     `
 }
 
+=======
+>>>>>>> ec195f7294af437cee1c55cb884225d7555cc946
