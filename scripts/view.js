@@ -4,7 +4,7 @@ function updateView(){
     if(modell.app.currentView === "homepppage"){
         html = homepage()
     }
-    document.getElementById("app").innerHTML = html
+    document.getElementById("main").innerHTML = html
 }
 
 
