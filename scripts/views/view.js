@@ -7,6 +7,9 @@ function updateView(){
     else if(modell.app.currentView === "resturant"){
         html = resturnatView();
     }
+    else if(modell.app.currentView === "Konto"){
+        html = kontoView();
+    }
     document.getElementById("main").innerHTML = html;
 }
 
