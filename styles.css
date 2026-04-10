@@ -96,14 +96,14 @@ button:hover {
 }
 
 .konto-innhold button {
-    background: white !important;
-    border: 1px solid #ccc !important;
-    color: black !important;
-    padding: 15px 0;
+    display: block;
+    margin: 5px auto;
+    width: 50%;
+    padding: 15px;
     border-radius: 20px;
-    font-size: 18px;
-    width: 80%;
-    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #ff6b00;
+    font-size: 16px;
 }
 
 .avatar-boks {
@@ -117,11 +117,23 @@ button:hover {
     margin: 0 auto;
 }
 
-.avatar-ikon {
-    font-size: 70px;
-    filter: grayscale(100%);
-    color: purple;
+.avatar-boks {
+    font-size: 70px; 
 }
 
+.konto-innhold input {
+    display: block;
+    width: 60%;
+    margin: 8px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
 
+.logo-tittel {
+    color: #e65c00;
+    font-style: italic;
+}
 
