@@ -11,6 +11,12 @@ function kontoView() {
         
         </div>
 
+        <div class="avatar-boks">
+        <span class="avatar-ikon">👤</span>
+        </div>
+
+       
+
         <div class="konto-innhold">
             ${bruker ? `
                 <div class="avatar">👤</div>
@@ -19,7 +25,7 @@ function kontoView() {
                 <p> ${bruker.phoneNr}</p>
                 <button onclick="loggUt()">Logg ut</button>
             ` : `
-                <div class="avatar">👤</div>
+                
                 <p>Du er ikke logget inn</p>
                 <button onclick="visLoggInn()">Logg inn</button>
                 <button onclick="visRegistrer()">Registrer deg</button>

@@ -105,3 +105,23 @@ button:hover {
     width: 80%;
     cursor: pointer;
 }
+
+.avatar-boks {
+    background-color: #ff6b00;
+    border-radius: 20px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.avatar-ikon {
+    font-size: 70px;
+    filter: grayscale(100%);
+    color: purple;
+}
+
+
+
