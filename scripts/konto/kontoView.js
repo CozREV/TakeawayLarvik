@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
  updateView()
 function kontoView() {
@@ -17,7 +16,7 @@ function kontoView() {
                 <div class="avatar">👤</div>
                 <h2>${bruker.name}</h2>
                 <p>${bruker.email}</p>
-                <p>📞 ${bruker.phoneNr}</p>
+                <p> ${bruker.phoneNr}</p>
                 <button onclick="loggUt()">Logg ut</button>
             ` : `
                 <div class="avatar">👤</div>
@@ -35,5 +34,4 @@ function kontoView() {
     `;
     updateView()
 }
-=======
->>>>>>> ce962b1b75baf83ba1aef594dcc5475da6e4a013
+
