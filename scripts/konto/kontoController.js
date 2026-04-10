@@ -1,6 +1,6 @@
-function visKonto(){
-    modell.app.currentView = "Konto";
-    document.getElementById("main").innerHTML = kontoView();
+function EndreView(view){
+    modell.app.currentView = view;
+    updateView()
 }
 
 function loggUt() {

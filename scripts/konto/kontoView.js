@@ -27,10 +27,10 @@ function kontoView() {
         </div>
 
         <div class="bunn-nav">
-            <button onclick="visHovedside()">Finn rett</button>
+            <button onclick="EndreView('Home')">Finn rett</button>
             <button onclick="visHandlekurv()">Handlekurv</button>
             <button onclick="visKonto()">Konto</button>
         </div>
     `;
-    updateView()
+    
 }
