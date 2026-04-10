@@ -1,11 +1,12 @@
-updateView()
+
 function updateView(){
     let html = ''
-    if(modell.app.currentView === "home"){
+    if(modell.app.currentView === "Home"){
         html = homeView();
     }
-    if else(modell.app.currentView === "resturant"){
+    else if(modell.app.currentView === "resturant"){
         html = resturnatView();
     }
     document.getElementById("main").innerHTML = html;
 }
+

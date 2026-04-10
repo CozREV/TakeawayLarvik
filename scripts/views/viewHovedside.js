@@ -1,9 +1,10 @@
-<<<<<<< HEAD
 
-updateView()
-function updateView() {
-    app.innerHTML = /*HTML*/`
-        <div class="header">
+
+  updateView()
+
+
+function homeView(){
+return /*html*/  `    <div class="header">
             <h1>Takeaway Larvik</h1>
             <input placeholder="søk etter restauranter, retter, hovedingredienser">
         </div>
@@ -20,20 +21,12 @@ function updateView() {
         <div class="bunn-nav">
             <button>Filter</button>
             <button>Handlekurv</button>
-            <button>Konto</button>
+            <button onclick="visKonto()">Konto</button>
+            <button>
         </div>
-    `
-    visProduktMaltider()
-    visDagens()
+    `;
+    
 }
-
+    
 updateView()
 
-function homeView(){
-    return /*html*/ `
-    <div>larvik takeawayyyy<div>
-    `
-}
-
-=======
->>>>>>> ec195f7294af437cee1c55cb884225d7555cc946
