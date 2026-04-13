@@ -42,7 +42,12 @@ function registrerBruker() {
         phoneNr: ny.phoneNr,
         password: ny.password,
         hasAdmin: false,
-        allergiesId: []
+        allergiesId: [],
+        stats: {
+            week: 0,
+            month: 0,
+            year: 0
+        }
     };
     modell.data.user.push(bruker);
     modell.app.logInId = bruker.id;
