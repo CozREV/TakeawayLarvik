@@ -1,5 +1,9 @@
 
- updateView()
+function visKonto() {
+    modell.app.currentView = "Konto"
+    updateView()
+}
+
 function kontoView() {
      const bruker = modell.data.user.find(u => u.id === modell.app.logInId);
 
@@ -8,7 +12,7 @@ function kontoView() {
         <div class="header">
             <h1 class="logo-tittel">Takeaway Larvik</h1>
             <h1>Konto</h1>
-            <button onclick="visHovedside()">&#8592;</button>
+            <button onclick="EndreView('Home')">&#8592;</button>
         </div>
 
         <div class="avatar-boks">
