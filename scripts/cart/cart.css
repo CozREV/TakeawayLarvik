@@ -1,0 +1,23 @@
+#cart-wrapper {
+    background-color: gray;
+    width: 500px;
+    height: 100dvh;
+    margin: 0 auto;
+}
+
+.cart-item {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px
+}
+
+.cart-bilde {
+    width: 100px;
+}
+
+#cart-bunn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
