@@ -137,3 +137,33 @@ button:hover {
     font-style: italic;
 }
 
+
+.stats-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.bar {
+    width: 30px;
+    background-color: black;
+    border-radius: 5px;
+    min-height: 5px;
+}
+
+.stats-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.bar {
+    background-color: #555;
+}
+

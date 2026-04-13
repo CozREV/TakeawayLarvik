@@ -40,6 +40,12 @@ function kontoView() {
                         <button onclick="statsFilter('month')">Mnd</button>
                         <button onclick="statsFilter('year')">År</button>
                     </div>
+                     <div class="stats-bars">
+                     <div class="bar" style="height: ${bruker.stats.week * 10}px"></div>
+                     <div class="bar" style="height: ${bruker.stats.month * 10}px"></div>
+                    <div class="bar" style="height: ${bruker.stats.year * 10}px"></div>
+                  </div>
+                  
                 </div>
 
                 <button onclick="loggUt()">Logg ut</button>

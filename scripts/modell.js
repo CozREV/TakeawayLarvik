@@ -94,9 +94,9 @@ const modell = {
             hasAdmin: false,
             allergiesId: [],
            stats: {
-             week: 0,
-             month: 0,
-             year: 0
+             week: 3,
+             month: 7,
+             year: 8
            }
          },
         
