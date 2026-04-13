@@ -1,3 +1,11 @@
+
+
+function visKonto(){
+    modell.app.currentView = "konto";
+    document.getElementById("main").innerHTML = kontoView();
+
+}
+
 function loggUt() {
     modell.app.logInId = null;
     EndreView('Home');
