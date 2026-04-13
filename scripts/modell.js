@@ -80,9 +80,29 @@ const modell = {
                 week: 0,
                 month: 0,
                 year: 0
-            }
+            },
             
-        }],
+            
+          
+            },
+           { 
+             id: 2,
+             name: "Omar",
+            email: "omar.ismail.no@gmail.com",
+            phoneNr: "48428653",
+            password: "omarboy84",
+            hasAdmin: false,
+            allergiesId: [],
+           stats: {
+             week: 0,
+             month: 0,
+             year: 0
+           }
+         },
+        
+        ],
+       
+        
         restaurant: [{
             id: 1,
             restName: "",
@@ -101,7 +121,7 @@ const modell = {
         products: [{
             id: 1,
             restaurantId: 1,
-            title: "Hamburger",
+            title: "",
             picture: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWFiemx3OThmY29peWkzbzZncTE1dms1Zm5oZ2k3OTVqMnFodzFqbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dZRlFW1sbFEpG/giphy.gif",
             price: 149,
             allergiesId: [],
