@@ -100,8 +100,8 @@ const modell = {
            }
          },
         
-        ],
-       
+        ], 
+
         
         restaurant: [{
             id: 1,
@@ -121,7 +121,7 @@ const modell = {
         products: [{
             id: 1,
             restaurantId: 1,
-            title: "",
+            title: "Hamburger",
             picture: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWFiemx3OThmY29peWkzbzZncTE1dms1Zm5oZ2k3OTVqMnFodzFqbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dZRlFW1sbFEpG/giphy.gif",
             price: 149,
             allergiesId: [],
