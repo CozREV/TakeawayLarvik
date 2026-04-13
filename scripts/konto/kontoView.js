@@ -3,30 +3,47 @@
 function kontoView() {
      const bruker = modell.data.user.find(u => u.id === modell.app.logInId);
 
-    return  `
+   
+    return `
         <div class="header">
-        <h1>Takeaway Larvik</h1>
-        <h1>Konto</h1>
-        <button onclick="visHovedside()"></button>
-        
+            <h1 class="logo-tittel">Takeaway Larvik</h1>
+            <h1>Konto</h1>
+            <button onclick="visHovedside()">&#8592;</button>
         </div>
 
         <div class="avatar-boks">
-        <span class="avatar-ikon">👤</span>
+            <span class="avatar-ikon">&#128100;</span>
         </div>
-
-       
 
         <div class="konto-innhold">
             ${bruker ? `
-                
-                <div class="avatar">👤</div>
                 <h2>${bruker.name}</h2>
-                <p>${bruker.email}</p>
-                <p> ${bruker.phoneNr}</p>
+
+                <details>
+                    <summary>Allergener</summary>
+                    <div class="allergen-liste">
+                        ${modell.data.allergies.map(a => `
+                            <label>
+                                <input type="checkbox"
+                                    ${bruker.allergiesId.includes(a.id) ? "checked" : ""}
+                                    onchange="oppdaterAllergi(${a.id}, this.checked)">
+                                ${a.name}
+                            </label>
+                        `).join("")}
+                    </div>
+                </details>
+
+                <div class="statistikk">
+                    <div class="stats-header">
+                        <p>Statistikk</p>
+                        <button onclick="statsFilter('week')">Uke</button>
+                        <button onclick="statsFilter('month')">Mnd</button>
+                        <button onclick="statsFilter('year')">År</button>
+                    </div>
+                </div>
+
                 <button onclick="loggUt()">Logg ut</button>
             ` : `
-                
                 <p>Du er ikke logget inn</p>
                 <button onclick="visLoggInn()">Logg inn</button>
                 <button onclick="visRegistrer()">Registrer deg</button>
@@ -34,13 +51,14 @@ function kontoView() {
         </div>
 
         <div class="bunn-nav">
-            <button onclick="EndreView('Home')">Finn rett</button>
+            <button onclick="visHovedside()">Finn rett</button>
             <button onclick="visHandlekurv()">Handlekurv</button>
-            <button onclick="EndreView('Home')">Logg Ut</button>
+            <button onclick="visKonto()">Konto</button>
         </div>
     `;
-    
 }
+    
+
 
 function loggInnView() {
     return /*html*/ `

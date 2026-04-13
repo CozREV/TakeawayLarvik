@@ -48,3 +48,17 @@ function registrerBruker() {
     modell.app.logInId = bruker.id;
     visKonto();
 }
+
+function oppdaterAllergi(id, checked) {
+    const bruker = modell.data.user.find(u => u.id === modell.app.logInId);
+     if (checked) {
+        bruker.allergiesId.push(id);
+    } else {
+        bruker.allergiesId = bruker.allergiesId.filter(a => a !== id);
+    }
+}
+
+function statsFilter(filter) {
+    modell.viewstate.statsFilter = filter;
+    visKonto();
+}
