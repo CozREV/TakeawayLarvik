@@ -2,6 +2,9 @@
 
 updateView()
 
+function mainMenu() {
+    homeView()
+}
 
 function homeView(){
 return /*html*/  `    <div class="header">
@@ -20,7 +23,7 @@ return /*html*/  `    <div class="header">
         </div>
         <div class="bunn-nav">
             <button>Filter</button>
-            <button>Handlekurv</button>
+            <button onclick="visHandlekurv()">Handlekurv</button>
             <button onclick="EndreView('Konto')">Konto</button>
             <button>
         </div>

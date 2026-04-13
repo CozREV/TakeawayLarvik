@@ -1,3 +1,10 @@
+
+
+function visHandlekurv() {
+    modell.app.currentView = "Cart"
+    updateView()
+}
+
 const cartView = {
     render() {
         const total = modell.viewstate.cart.reduce((sum, item) => {
@@ -5,10 +12,10 @@ const cartView = {
             return sum + (produkt.price * item.quantity)
         }, 0)
 
-        document.getElementById("main").innerHTML = `
+        return `
             <div id="cart-wrapper">
                 <div id="cart-header">
-                    <button onclick="cartController.tilbake()">←</button>
+                    <button onclick="EndreView('Home')">←</button>
                     <h2>Handlekurv</h2>
                 </div>
 
