@@ -82,8 +82,6 @@ const modell = {
                 year: 0
             },
             
-            
-          
             },
            { 
              id: 2,
@@ -102,7 +100,7 @@ const modell = {
         
         ], 
 
-        
+
         restaurant: [{
             id: 1,
             restName: "",
