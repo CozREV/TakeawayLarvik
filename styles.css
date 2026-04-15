@@ -8,8 +8,8 @@ body {
 
 #main {
     max-width: 500px;
-    margin: auto;
-    padding: 20px;
+    margin: 0px auto;
+    padding: 0px;
 }
 
 
@@ -135,6 +135,7 @@ button:hover {
 .logo-tittel {
     color: #e65c00;
     font-style: italic;
+    text-align: center;
 }
 
 
@@ -211,4 +212,6 @@ button:hover {
     font-size: xx-large;
 }
 
-
+.username {
+    text-align: center;
+}

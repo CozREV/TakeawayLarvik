@@ -21,7 +21,7 @@ function kontoView() {
 
         <div class="konto-innhold">
             ${bruker ? `
-                <h2>${bruker.name}</h2>
+                <h2 class="username">${bruker.name}</h2>
 
                 <details>
                     <summary>Allergener</summary>
