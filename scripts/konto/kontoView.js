@@ -54,7 +54,7 @@ function kontoView() {
 
                 <button onclick="loggUt()">Logg ut</button>
             ` : `
-                <p>Du er ikke logget inn</p>
+                <p id="notLogIn">Du er ikke logget inn</p>
                 <button onclick="visLoggInn()">Logg inn</button>
                 <button onclick="visRegistrer()">Registrer deg</button>
             `}

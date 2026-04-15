@@ -131,6 +131,7 @@ const modell = {
                 month: 0,
                 year: 0
             }
+
         }],
         drinks: [
             {id: 1, name: "Cola", price: 89},

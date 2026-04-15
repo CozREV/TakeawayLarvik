@@ -1,17 +1,19 @@
-Reset */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
 }
 
-
 #main {
     max-width: 500px;
-    margin: 0px auto;
-    padding: 0px;
+    margin: 0 auto;
+    padding: 0;
 }
 
+#main-title, .logo-tittel {
+    font-size: xxx-large;
+    margin: 20px;
+}
 
 .header {
     text-align: center;
@@ -22,14 +24,15 @@ body {
     color: #ff6b00;
 }
 
-.header input {
+.header input,
+.konto-innhold input {
     width: 100%;
     padding: 12px;
     border-radius: 10px;
     border: 1px solid #ddd;
     margin-top: 10px;
+    outline: none;
 }
-
 
 .seksjon {
     margin-top: 20px;
@@ -44,8 +47,7 @@ body {
     font-size: 14px;
 }
 
-
-#måltider div,
+#maltider div,
 #dagens div {
     background: white;
     padding: 12px;
@@ -54,6 +56,40 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+#maltider,
+#dagens {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+#maltider::-webkit-scrollbar,
+#dagens::-webkit-scrollbar {
+    display: none;
+}
+
+.meal-card {
+    min-width: 160px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0px 2px black;
+}
+
+.meal-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.meal-card p {
+    padding: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
 
 .bunn-nav {
     position: fixed;
@@ -69,8 +105,8 @@ body {
     border-top: 1px solid #ddd;
 }
 
-
-button {
+button,
+.konto-innhold button {
     background: #ff6b00;
     color: white;
     border: none;
@@ -79,11 +115,9 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover{
     background: #e65c00;
 }
-
-
 
 .konto-innhold p {
     font-size: 20px;
@@ -92,7 +126,6 @@ button:hover {
     padding: 15px 30px;
     border-radius: 10px;
     width: 80%;
-    text-align: center;
 }
 
 .konto-innhold button {
@@ -102,7 +135,6 @@ button:hover {
     padding: 15px;
     border-radius: 20px;
     border: 1px solid #ccc;
-    background: #ff6b00;
     font-size: 16px;
 }
 
@@ -115,29 +147,8 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    font-size: 70px;
 }
-
-.avatar-boks {
-    font-size: 70px; 
-}
-
-.konto-innhold input {
-    display: block;
-    width: 60%;
-    margin: 8px auto;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 16px;
-    outline: none;
-}
-
-.logo-tittel {
-    color: #e65c00;
-    font-style: italic;
-    text-align: center;
-}
-
 
 .stats-bars {
     display: flex;
@@ -151,7 +162,7 @@ button:hover {
 
 .bar {
     width: 30px;
-    background-color: black;
+    background-color: #555;
     border-radius: 5px;
     min-height: 5px;
 }
@@ -162,10 +173,6 @@ button:hover {
     gap: 10px;
     justify-content: center;
     margin-bottom: 10px;
-}
-
-.bar {
-    background-color: #555;
 }
 
 #cart-wrapper {
@@ -183,6 +190,7 @@ button:hover {
     border: 2px solid black;
     border-radius: 10px;
     margin: 0 10px;
+    min-height: 525px;
     overflow: auto;
 }
 
@@ -190,7 +198,7 @@ button:hover {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    margin: 30px 0px;
+    margin: 30px 0;
 }
 
 .cart-bilde {
@@ -204,14 +212,40 @@ button:hover {
 }
 
 #btn-mer, #btn-betal {
-    padding: 20px 40px
+    padding: 20px 40px;
 }
 
 #cart-total {
-    margin: 100px auto;
+    margin: 50px auto;
     font-size: xx-large;
 }
 
 .username {
+    text-align: center;
+}
+
+.allergen-liste label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.allergen-liste input {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+}
+
+.btn-click:hover {
+    background: #ff6b00;
+    color: white;
+}
+
+.konto-innhold {
+    text-align: center;
+}
+
+#notLogIn {
+    margin: 20px auto;
     text-align: center;
 }

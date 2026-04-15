@@ -28,7 +28,7 @@ const cartView = {
                                     <p class="cart-restaurant">Restaurant navn</p>
                                     <p class="cart-tittel">${produkt.title}</p>
                                     <p class="cart-innhold">${produkt.ingredients}</p>
-                                    <button onclick="cartController.fjernVare(${index})">Fjern</button>
+                                    <button class="btn-click" onclick="cartController.fjernVare(${index})">Fjern</button>
                                 </div>
                                 <img class="cart-bilde" src="${produkt.picture}" />
                             </div>

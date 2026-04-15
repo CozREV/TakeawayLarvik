@@ -14,5 +14,6 @@ function updateView(){
         html = cartView.render();
     }
     document.getElementById("main").innerHTML = html;
+    renderMeals()
 }
 
