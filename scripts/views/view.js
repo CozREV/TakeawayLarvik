@@ -4,8 +4,8 @@ function updateView(){
     if(modell.app.currentView === "Home"){
         html = homeView();
     }
-    else if(modell.app.currentView === "resturant"){
-        html = resturnatView();
+    else if(modell.app.currentView === "restaurant"){
+        html = restaurnatView();
     }
     else if(modell.app.currentView === "Konto"){
         html = kontoView();
