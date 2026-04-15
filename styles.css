@@ -13,6 +13,8 @@ body {
 #main-title, .logo-tittel {
     font-size: xxx-large;
     margin: 20px;
+    color: #ff6b00;
+    text-align: center;
 }
 
 .header {
