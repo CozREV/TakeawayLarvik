@@ -1,7 +1,7 @@
 function homeView(){
 return /*html*/  `    <div class="header">
             <h1 id="main-title">Takeaway Larvik</h1>
-            <input placeholder="søk etter restauranter, retter, hovedingredienser">
+            <input id="search-txt"placeholder="🔎 søk etter restauranter, retter, hovedingredienser">
         </div>
         <div class="seksjon">
             <h2>Dine maltider:</h2>
