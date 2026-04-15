@@ -1,10 +1,10 @@
 const cartController = {
     visKurv() {
-        cartView.render()
+        visHandlekurv()
     },
 
     fjernVare(index) {
         modell.viewstate.cart.splice(index, 1)
-        cartView.render()
+        visHandlekurv()
     }
 }

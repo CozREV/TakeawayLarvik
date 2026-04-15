@@ -1,5 +1,4 @@
 
-
 function visHandlekurv() {
     modell.app.currentView = "Cart"
     updateView()
@@ -11,7 +10,7 @@ const cartView = {
             const produkt = modell.data.products.find(p => p.id === item.productId)
             return sum + (produkt.price * item.quantity)
         }, 0)
-
+        
         return `
             <div id="cart-wrapper">
                 <div id="cart-header">
@@ -42,8 +41,8 @@ const cartView = {
                 <div id="cart-bunn">
                     <button id="btn-mer"> Legg til mer</button>
                     <button id="btn-betal"> Gå til betaling</button>
-                </div>
-
+                 </div>
+            </div>
         `
     }
 }
