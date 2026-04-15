@@ -115,12 +115,85 @@ const modell = {
                     year: []
                 }
             }
-        }],
+        }], 
+
         products: [{
             id: 1,
             restaurantId: 1,
             title: "Hamburger",
-            picture: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWFiemx3OThmY29peWkzbzZncTE1dms1Zm5oZ2k3OTVqMnFodzFqbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dZRlFW1sbFEpG/giphy.gif",
+            picture: "picture/Hamburger.jpg",
+            price: 149,
+            allergiesId: [],
+            ingredients: "",
+            drinkId: [0],
+            ratings: [],
+            stats: {
+                week: 0,
+                month: 0,
+                year: 0
+            }
+
+        },
+    
+        {
+            id: 2,
+            restaurantId: 1,
+            title: "Pizza",
+            picture: "picture/pizza.jpg",
+            price: 149,
+            allergiesId: [],
+            ingredients: "",
+            drinkId: [0],
+            ratings: [],
+            stats: {
+                week: 0,
+                month: 0,
+                year: 0
+            }
+
+        },
+    
+        {
+            id: 3,
+            restaurantId: 2,
+            title: "Pasta",
+            picture: "picture/pasta.jpg",
+            price: 149,
+            allergiesId: [],
+            ingredients: "",
+            drinkId: [0],
+            ratings: [],
+            stats: {
+                week: 0,
+                month: 0,
+                year: 0
+            }
+
+        },
+    
+        {
+            id: 4,
+            restaurantId: 3,
+            title: "Kebab",
+            picture: "picture/kebab.jpg",
+            price: 149,
+            allergiesId: [],
+            ingredients: "",
+            drinkId: [0],
+            ratings: [],
+            stats: {
+                week: 0,
+                month: 0,
+                year: 0
+            }
+
+        },
+        
+        {
+            id: 5,
+            restaurantId: 4,
+            title: "Sushi",
+            picture: "picture/sushi.jpg",
             price: 149,
             allergiesId: [],
             ingredients: "",
