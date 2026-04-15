@@ -255,3 +255,8 @@ button:hover{
 #search-txt {
     font-size: large;
 }
+
+#filter-panel {
+    text-align: center;
+    margin: auto 0px;
+}
