@@ -28,7 +28,7 @@ body {
 
 .header input,
 .account-content input {
-    width: 100%;
+    width: 96%;
     padding: 12px;
     border-radius: 10px;
     border: 1px solid #ddd;
