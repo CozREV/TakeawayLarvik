@@ -100,30 +100,74 @@ function logInView() {
 
 function registerView() {
     return /*html*/ `
-       <h1 class="logo-title">Takeaway Larvik</h1>
+        <h1 class="logo-title">Takeaway Larvik</h1>
         <div class="header">
             <button onclick="showAccount()">&#8592;</button>
             <h1>Registrer deg</h1>
         </div>
 
         <div class="account-content">
-            <input 
-                type="text" 
+            <input
+                type="text"
                 placeholder="Navn"
                 oninput="modell.viewstate.createUser.name = this.value">
-            <input 
-                type="email" 
+            <input
+                type="email"
                 placeholder="Email"
                 oninput="modell.viewstate.createUser.email = this.value">
-            <input 
-                type="tel" 
+            <input
+                type="tel"
                 placeholder="Telefonnummer"
                 oninput="modell.viewstate.createUser.phoneNr = this.value">
-            <input 
-                type="password" 
+            <input
+                type="password"
                 placeholder="Passord"
                 oninput="modell.viewstate.createUser.password = this.value">
+
+            <div class="konto-type">
+                <label>
+                    <input type="radio" name="kontoType" value="kunde"
+                        onchange="modell.viewstate.createUser.isBedrift = false"
+                        checked>
+                    Kunde
+                </label>
+                <label>
+                    <input type="radio" name="kontoType" value="bedrift"
+                        onchange="modell.viewstate.createUser.isBedrift = true">
+                    Bedrift
+                </label>
+            </div>
+
             <button onclick="registerUser()">Registrer deg</button>
+        </div>
+
+        <div class="bottom-nav">
+            <button onclick="showMainSite()">Finn rett</button>
+            <button onclick="showCart()">Handlekurv</button>
+            <button onclick="showAccount()">Konto</button>
+        </div>
+    `;
+}
+
+         //admin konto admin konto admin konto//
+
+function bedriftView() {
+    const user = modell.data.user.find(u => u.id === modell.app.logInId);
+    
+    return /*html*/ `
+        <h1 class="logo-title">Takeaway Larvik</h1>
+        <div class="header">
+            <button onclick="showAccount()">&#8592;</button>
+            <h1>${user.name}</h1>
+        </div>
+
+        <div class="account-content">
+            <div class="bedrift-meny">
+                <button onclick="showLeggTilMat()">🍕 Legg til mat</button>
+                <button onclick="showRestaurantKontroll()">🏪 Kontroller restaurant</button>
+            </div>
+
+            <button onclick="logOut()">Logg ut</button>
         </div>
 
         <div class="bottom-nav">

@@ -15,7 +15,8 @@ const modell = {
             phoneNr: null,
             password: null,
             hasAdmin: null,
-            allergiesId: []
+            allergiesId: [],
+            isBedrift: false,
         },
         createRestaurant: {
             id: null,
