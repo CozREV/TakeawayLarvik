@@ -127,13 +127,13 @@ function registerView() {
             <div class="konto-type">
                 <label>
                     <input type="radio" name="kontoType" value="kunde"
-                        onchange="modell.viewstate.createUser.isBedrift = false"
+                        onchange="modell.viewstate.createUser.isCompany = false"
                         checked>
                     Kunde
                 </label>
                 <label>
                     <input type="radio" name="kontoType" value="bedrift"
-                        onchange="modell.viewstate.createUser.isBedrift = true">
+                        onchange="modell.viewstate.createUser.isCompany = true">
                     Bedrift
                 </label>
             </div>
@@ -151,7 +151,7 @@ function registerView() {
 
          //admin konto admin konto admin konto//
 
-function bedriftView() {
+function companyView() {
     const user = modell.data.user.find(u => u.id === modell.app.logInId);
     
     return /*html*/ `
@@ -163,8 +163,8 @@ function bedriftView() {
 
         <div class="account-content">
             <div class="bedrift-meny">
-                <button onclick="showLeggTilMat()">🍕 Legg til mat</button>
-                <button onclick="showRestaurantKontroll()">🏪 Kontroller restaurant</button>
+                <button onclick="showAddFood()">🍕 Legg til mat</button>
+                <button onclick="showRestaurantControl()">🏪 Kontroller restaurant</button>
             </div>
 
             <button onclick="logOut()">Logg ut</button>

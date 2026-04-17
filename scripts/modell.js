@@ -16,7 +16,7 @@ const modell = {
             password: null,
             hasAdmin: null,
             allergiesId: [],
-            isBedrift: false,
+            isCompany: null,
         },
         createRestaurant: {
             id: null,
@@ -77,6 +77,7 @@ const modell = {
             password: "8972",
             hasAdmin: false,
             allergiesId: [1, 3, 5],
+            isCompany: false,
             stats: {
                 week: 0,
                 month: 0,
@@ -84,7 +85,7 @@ const modell = {
             },
             
             },
-           { 
+            { 
             id: 2,
             name: "Omar",
             email: "omar.ismail.no@gmail.com",
@@ -92,13 +93,28 @@ const modell = {
             password: "omarboy84",
             hasAdmin: false,
             allergiesId: [],
+            isCompany: false,
             stats: {
              week: 3,
              month: 7,
              year: 8
            }
-         },
-        
+            },
+            { 
+            id: 3,
+            name: "Larvik Pizza",
+            email: "larvik@pizza.no",
+            phoneNr: "12345678",
+            password: "asd",
+            hasAdmin: false,
+            allergiesId: [],
+            isCompany: true,
+            stats: {
+             week: 0,
+             month: 0,
+             year: 0
+           }
+            },
         ], 
 
 

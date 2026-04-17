@@ -11,7 +11,7 @@ function updateView(){
         html = accountView();
     }
     else if(modell.app.currentView === "Bedrift"){
-        html = bedriftView();
+        html = companyView();
     }
     else if(modell.app.currentView === "Cart"){
         html = cartView.render();

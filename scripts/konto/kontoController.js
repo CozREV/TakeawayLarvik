@@ -1,9 +1,12 @@
-
-
-function showAccount(){
-    modell.app.currentView = "konto";
-    document.getElementById("main").innerHTML = accountView();
-
+function showAccount() {
+    const user = modell.data.user.find(u => u.id === modell.app.logInId);
+    
+    if (user && user.isCompany) {
+        modell.app.currentView = "Bedrift";
+    } else {
+        modell.app.currentView = "Konto";
+    }
+    updateView();
 }
 
 function logOut() {
@@ -43,6 +46,7 @@ function registerUser() {
         password: newUser.password,
         hasAdmin: false,
         allergiesId: [],
+        isCompany: newUser.isCompany || false,
         stats: {
             week: 0,
             month: 0,
@@ -66,16 +70,4 @@ function updateAllergy(id, checked) {
 function statsFilter(filter) {
     modell.viewstate.statsFilter = filter;
     showAccount();
-}
-
-
-function showAccount() {
-    const user = modell.data.user.find(u => u.id === modell.app.logInId);
-    
-    if (user && user.isBedrift) {
-        modell.app.currentView = "Bedrift";
-    } else {
-        modell.app.currentView = "Konto";
-    }
-    updateView();
 }
