@@ -22,7 +22,7 @@ function logIn() {
     );
 
     if (user) {
-        modell.app.logInId = bruker.id;
+        modell.app.logInId = user.id;
         showAccount();
     } else {
         alert("Feil email eller passord!");

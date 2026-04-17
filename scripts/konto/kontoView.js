@@ -20,7 +20,7 @@ function accountView() {
         </div>
 
         <div class="account-content">
-            ${user ? `
+            ${user ? /*html*/ `
                 <h2 class="username">${user.name}</h2>
 
                 <details>
@@ -52,13 +52,13 @@ function accountView() {
                   
                 </div>
 
-                <button onclick="logOut()">Logg ut</button>
-            ` : `
-                <p id="notLogIn">Du er ikke logget inn</p>
-                <button onclick="showLogIn()">Logg inn</button>
-                <button onclick="showRegister()">Registrer deg</button>
+                    <button onclick="logOut()">Logg ut</button>
+                    ` : `
+                    <p id="notLogIn">Du er ikke logget inn</p>
+                    <button onclick="showLogIn()">Logg inn</button>
+                    <button onclick="showRegister()">Registrer deg</button>
             `}
-        </div>
+                </div>
 
         <div class="bottom-nav">
             <button onclick="changeView('Home')">Finn rett</button>
@@ -87,7 +87,7 @@ function logInView() {
                 type="password" 
                 placeholder="Passord"
                 oninput="modell.viewstate.logIn.password = this.value">
-            <button onclick="loggInn()">Logg inn</button>
+            <button onclick="logIn()">Logg inn</button>
         </div>
 
         <div class="bottom-nav">
