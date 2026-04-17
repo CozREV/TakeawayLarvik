@@ -84,14 +84,14 @@ const modell = {
             
             },
            { 
-             id: 2,
-             name: "Omar",
+            id: 2,
+            name: "Omar",
             email: "omar.ismail.no@gmail.com",
             phoneNr: "48428653",
             password: "omarboy84",
             hasAdmin: false,
             allergiesId: [],
-           stats: {
+            stats: {
              week: 3,
              month: 7,
              year: 8

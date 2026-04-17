@@ -1,10 +1,10 @@
 const cartController = {
-    visKurv() {
-        visHandlekurv()
+    showProduct() {
+        showCart()
     },
 
-    fjernVare(index) {
+    removeProduct(index) {
         modell.viewstate.cart.splice(index, 1)
-        visHandlekurv()
+        showCart()
     }
 }

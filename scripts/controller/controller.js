@@ -1,4 +1,4 @@
-function EndreView(view){
+function changeView(view){
     modell.app.currentView = view;
     updateView()
 }

@@ -1,46 +1,46 @@
 
 
-function visKonto(){
+function showAccount(){
     modell.app.currentView = "konto";
-    document.getElementById("main").innerHTML = kontoView();
+    document.getElementById("main").innerHTML = accountView();
 
 }
 
-function loggUt() {
+function logOut() {
     modell.app.logInId = null;
-    EndreView('Home');
+    changeView('Home');
 }
 
-function visLoggInn() {
-    document.getElementById("main").innerHTML = loggInnView();
+function showLogIn() {
+    document.getElementById("main").innerHTML = logInView();
 }
 
-function loggInn() {
-    const bruker = modell.data.user.find(u => 
+function logIn() {
+    const user = modell.data.user.find(u => 
         u.email === modell.viewstate.logIn.username && 
         u.password === modell.viewstate.logIn.password
     );
 
-    if (bruker) {
+    if (user) {
         modell.app.logInId = bruker.id;
-        visKonto();
+        showAccount();
     } else {
         alert("Feil email eller passord!");
     }
 }
 
-function visRegistrer() {
-    document.getElementById("main").innerHTML = registrerView();
+function showRegister() {
+    document.getElementById("main").innerHTML = registerView();
 }
 
-function registrerBruker() {
-    const ny = modell.viewstate.createUser;
-    const bruker = {
+function registerUser() {
+    const newUser = modell.viewstate.createUser;
+    const user = {
         id: modell.data.user.length + 1,
-        name: ny.name,
-        email: ny.email,
-        phoneNr: ny.phoneNr,
-        password: ny.password,
+        name: newUser.name,
+        email: newUser.email,
+        phoneNr: newUser.phoneNr,
+        password: newUser.password,
         hasAdmin: false,
         allergiesId: [],
         stats: {
@@ -49,21 +49,21 @@ function registrerBruker() {
             year: 0
         }
     };
-    modell.data.user.push(bruker);
-    modell.app.logInId = bruker.id;
-    visKonto();
+    modell.data.user.push(user);
+    modell.app.logInId = user.id;
+    showAccount();
 }
 
-function oppdaterAllergi(id, checked) {
-    const bruker = modell.data.user.find(u => u.id === modell.app.logInId);
+function updateAllergy(id, checked) {
+    const user = modell.data.user.find(u => u.id === modell.app.logInId);
      if (checked) {
-        bruker.allergiesId.push(id);
+        user.allergiesId.push(id);
     } else {
-        bruker.allergiesId = bruker.allergiesId.filter(a => a !== id);
+        user.allergiesId = user.allergiesId.filter(a => a !== id);
     }
 }
 
 function statsFilter(filter) {
     modell.viewstate.statsFilter = filter;
-    visKonto();
+    showAccount();
 }

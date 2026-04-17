@@ -5,15 +5,19 @@ function updateView(){
         html = homeView();
     }
     else if(modell.app.currentView === "restaurant"){
-        html = restaurnatView();
+        html = restaurantView();
     }
     else if(modell.app.currentView === "Konto"){
-        html = kontoView();
+        html = accountView();
     }
     else if(modell.app.currentView === "Cart"){
         html = cartView.render();
     }
-    document.getElementById("main").innerHTML = html;
-    renderMeals()
+
+    document.getElementById("main").innerHTML = html
+
+    if (modell.app.currentView === "Home") {
+        renderMeals()
+    }
 }
 

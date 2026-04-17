@@ -1,26 +1,26 @@
 function homeView(){
-return /*html*/  `    <div class="header">
+    return /*html*/ `    
+        <div class="header">
             <h1 id="main-title">Takeaway Larvik</h1>
-            <input id="search-txt"placeholder="🔎 søk etter restauranter, retter, hovedingredienser">
+            <input id="search-txt" placeholder="🔎 Søk etter restauranter, retter, hovedingredienser">
         </div>
-        <div class="seksjon">
-            <h2>Dine maltider:</h2>
+        <div class="section">
+            <h2>Dine måltider:</h2>
             <p>Det du bestiller oftest</p>
-            <div id="maltider"></div>
+            <div id="meals"></div>
         </div>
-        <div class="seksjon">
+        <div class="section">
             <h2>Dagens:</h2>
             <p>Tilbud og nyheter fra forskjellige restauranter i Larvik</p>
-            <div id="dagens"></div>
+            <div id="daily"></div>
         </div>
         <div id="filter-panel"></div>
-        <div class="bunn-nav">
+        <div class="bottom-nav">
             <button onclick="toggleFilter()">Filter</button>
-            <button onclick="visHandlekurv()">Handlekurv</button>
-            <button onclick="visKonto()">Konto</button>
+            <button onclick="showCart()">Handlekurv</button>
+            <button onclick="showAccount()">Konto</button>
         </div>
     `;
-    
 }
 
 function renderMeals() {
@@ -33,8 +33,8 @@ function renderMeals() {
         </div>
     `).join("")
 
-    document.getElementById("maltider").innerHTML = html
-    document.getElementById("dagens").innerHTML = html
+    document.getElementById("meals").innerHTML = html
+    document.getElementById("daily").innerHTML = html
 }
 
 function toggleFilter() {
@@ -46,10 +46,10 @@ function toggleFilter() {
     }
 
     panel.innerHTML = `
-        <div class="filter-boks">
+        <div class="filter-box">
             <label>
                 <input type="checkbox"
-                    ${modell.viewstate.filter.allergyFilter ? "checked" : ""}
+                    ${modell.viewstate.filter.allergyFilter ? "unchecked" : ""}
                     onchange="modell.viewstate.filter.allergyFilter = this.checked; filterMeals()">
                 Skjul mine allergener
             </label>
@@ -58,22 +58,22 @@ function toggleFilter() {
 }
 
 function filterMeals() {
-    const bruker = modell.data.user.find(u => u.id === modell.app.logInId)
-    let produkter = modell.data.products
+    const user = modell.data.user.find(u => u.id === modell.app.logInId)
+    let products = modell.data.products
 
-    if (bruker && modell.viewstate.filter.allergyFilter) {
-        produkter = produkter.filter(p => !p.allergiesId.some(a => bruker.allergiesId.includes(a)))
+    if (user && modell.viewstate.filter.allergyFilter) {
+        products = products.filter(p => !p.allergiesId.some(a => user.allergiesId.includes(a)))
     }
 
-    const html = produkter.map(m => `
+    const html = products.map(m => `
         <div class="meal-card">
             <img src="${m.picture}">
             <p>${m.title}</p>
         </div>
     `).join("")
 
-    document.getElementById("maltider").innerHTML = html
-    document.getElementById("dagens").innerHTML = html
+    document.getElementById("meals").innerHTML = html
+    document.getElementById("daily").innerHTML = html
 }
 
 

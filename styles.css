@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 
-#main-title, .logo-tittel {
+#main-title, .logo-title {
     font-size: xxx-large;
     margin: 20px;
     color: #ff6b00;
@@ -27,7 +27,7 @@ body {
 }
 
 .header input,
-.konto-innhold input {
+.account-content input {
     width: 100%;
     padding: 12px;
     border-radius: 10px;
@@ -36,21 +36,21 @@ body {
     outline: none;
 }
 
-.seksjon {
+.section {
     margin-top: 20px;
 }
 
-.seksjon h2 {
+.section h2 {
     margin-bottom: 5px;
 }
 
-.seksjon p {
+.section p {
     color: gray;
     font-size: 14px;
 }
 
-#maltider div,
-#dagens div {
+#meals div,
+#daily div {
     background: white;
     padding: 12px;
     border-radius: 12px;
@@ -58,8 +58,8 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#maltider,
-#dagens {
+#meals,
+#daily {
     display: flex;
     overflow-x: auto;
     gap: 12px;
@@ -67,8 +67,8 @@ body {
     scroll-behavior: smooth;
 }
 
-#maltider::-webkit-scrollbar,
-#dagens::-webkit-scrollbar {
+#meals::-webkit-scrollbar,
+#daily::-webkit-scrollbar {
     display: none;
 }
 
@@ -93,7 +93,7 @@ body {
     font-size: 14px;
 }
 
-.bunn-nav {
+.bottom-nav {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -108,7 +108,7 @@ body {
 }
 
 button,
-.konto-innhold button {
+.account-content button {
     background: #ff6b00;
     color: white;
     border: none;
@@ -121,7 +121,7 @@ button:hover{
     background: #e65c00;
 }
 
-.konto-innhold p {
+.account-content p {
     font-size: 20px;
     font-weight: bold;
     border: 1px solid #ccc;
@@ -130,7 +130,7 @@ button:hover{
     width: 80%;
 }
 
-.konto-innhold button {
+.account-content button {
     display: block;
     margin: 5px auto;
     width: 50%;
@@ -140,7 +140,7 @@ button:hover{
     font-size: 16px;
 }
 
-.avatar-boks {
+.avatar-box {
     background-color: #ff6b00;
     border-radius: 20px;
     width: 120px;
@@ -180,14 +180,16 @@ button:hover{
 #cart-wrapper {
     display: flex;
     flex-direction: column;
-    background-color: gray;
+    background-color: rgba(75, 75, 75, 0.167);
     width: 500px;
     height: 100dvh;
     margin: 0 auto;
     font-size: larger;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-#cart-liste {
+#cart-list {
     flex: 1;
     border: 2px solid black;
     border-radius: 10px;
@@ -203,17 +205,17 @@ button:hover{
     margin: 30px 0;
 }
 
-.cart-bilde {
+.cart-picture {
     width: 150px;
 }
 
-#cart-bunn {
+#cart-bottom {
     display: flex;
     justify-content: space-evenly;
     margin-top: auto;
 }
 
-#btn-mer, #btn-betal {
+#btn-more, #btn-pay {
     padding: 20px 40px;
 }
 
@@ -226,13 +228,13 @@ button:hover{
     text-align: center;
 }
 
-.allergen-liste label {
+.allergy-list label {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.allergen-liste input {
+.allergy-list input {
     width: 13px;
     height: 13px;
     margin: 0;
@@ -243,7 +245,7 @@ button:hover{
     color: white;
 }
 
-.konto-innhold {
+.account-content {
     text-align: center;
 }
 
