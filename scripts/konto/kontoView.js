@@ -1,6 +1,6 @@
 
 function showAccount() {
-    modell.app.currentView = "Konto"
+    modell.app.currentView = "Account"
     updateView()
 }
 
@@ -124,15 +124,15 @@ function registerView() {
                 placeholder="Passord"
                 oninput="modell.viewstate.createUser.password = this.value">
 
-            <div class="konto-type">
+            <div class="account-type">
                 <label>
-                    <input type="radio" name="kontoType" value="kunde"
+                    <input type="radio" name="accountType" value="customer"
                         onchange="modell.viewstate.createUser.isCompany = false"
                         checked>
                     Kunde
                 </label>
                 <label>
-                    <input type="radio" name="kontoType" value="bedrift"
+                    <input type="radio" name="accountType" value="company"
                         onchange="modell.viewstate.createUser.isCompany = true">
                     Bedrift
                 </label>
@@ -155,14 +155,15 @@ function companyView() {
     const user = modell.data.user.find(u => u.id === modell.app.logInId);
     
     return /*html*/ `
-        <h1 class="logo-title">Takeaway Larvik</h1>
-        <div class="header">
-            <button onclick="showAccount()">&#8592;</button>
+    <div class="header">
+            <h1 class="logo-title">Takeaway Larvik</h1>
+            <h1>Konto</h1>
+            <button onclick="changeView('Home')">&#8592;</button>
             <h1>${user.name}</h1>
         </div>
 
         <div class="account-content">
-            <div class="bedrift-meny">
+            <div class="comapny-">
                 <button onclick="showAddFood()">🍕 Legg til mat</button>
                 <button onclick="showRestaurantControl()">🏪 Kontroller restaurant</button>
             </div>

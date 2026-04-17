@@ -2,9 +2,9 @@ function showAccount() {
     const user = modell.data.user.find(u => u.id === modell.app.logInId);
     
     if (user && user.isCompany) {
-        modell.app.currentView = "Bedrift";
+        modell.app.currentView = "Company";
     } else {
-        modell.app.currentView = "Konto";
+        modell.app.currentView = "Account";
     }
     updateView();
 }

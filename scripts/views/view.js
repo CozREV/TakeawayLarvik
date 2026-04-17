@@ -7,10 +7,10 @@ function updateView(){
     else if(modell.app.currentView === "restaurant"){
         html = restaurantView();
     }
-    else if(modell.app.currentView === "Konto"){
+    else if(modell.app.currentView === "Account"){
         html = accountView();
     }
-    else if(modell.app.currentView === "Bedrift"){
+    else if(modell.app.currentView === "Company"){
         html = companyView();
     }
     else if(modell.app.currentView === "Cart"){

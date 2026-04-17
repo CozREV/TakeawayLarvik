@@ -11,7 +11,7 @@ const cartView = {
             return sum + (product.price * item.quantity)
         }, 0)
         
-        return `
+        return /*html*/ `
             <div id="cart-wrapper">
                 <div id="cart-header">
                     <button onclick="changeView('Home')">←</button>
