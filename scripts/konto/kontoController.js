@@ -67,3 +67,15 @@ function statsFilter(filter) {
     modell.viewstate.statsFilter = filter;
     showAccount();
 }
+
+
+function showAccount() {
+    const user = modell.data.user.find(u => u.id === modell.app.logInId);
+    
+    if (user && user.isBedrift) {
+        modell.app.currentView = "Bedrift";
+    } else {
+        modell.app.currentView = "Konto";
+    }
+    updateView();
+}
