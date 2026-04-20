@@ -1,8 +1,12 @@
 function homeView(){
     return /*html*/ `    
         <div class="header">
-            <h1 id="main-title">Takeaway Larvik</h1>
-            <input id="search-txt" placeholder="🔎 Søk etter restauranter, retter, hovedingredienser">
+            <div class="header-snd">
+                <h1 id="main-title">Takeaway Larvik</h1>
+                <button onclick="toggleDarkMode()">🌙</button>
+            </div>
+            <input id="search-txt"  oninput="modell.viewstate.searchBar = this.value ; filterMeals()" 
+                placeholder="🔎 Søk etter restauranter, retter, hovedingredienser">
         </div>
         <div class="section">
             <h2>Dine måltider:</h2>
@@ -59,10 +63,16 @@ function toggleFilter() {
 
 function filterMeals() {
     const user = modell.data.user.find(u => u.id === modell.app.logInId)
+    const search = modell.viewstate.searchBar
+    
     let products = modell.data.products
 
     if (user && modell.viewstate.filter.allergyFilter) {
         products = products.filter(p => !p.allergiesId.some(a => user.allergiesId.includes(a)))
+    }
+
+    if (search) {
+        products = products.filter(p => p.title.toLowerCase().includes(search.toLowerCase()))
     }
 
     const html = products.map(m => `
@@ -74,6 +84,10 @@ function filterMeals() {
 
     document.getElementById("meals").innerHTML = html
     document.getElementById("daily").innerHTML = html
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark")
 }
 
 
