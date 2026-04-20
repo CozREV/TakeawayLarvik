@@ -28,12 +28,13 @@ body {
 
 .header input,
 .account-content input {
-    width: 96%;
+    width: 100%;
     padding: 12px;
     border-radius: 10px;
     border: 1px solid #ddd;
     margin-top: 10px;
     outline: none;
+    box-sizing: border-box;
 }
 
 .section {
@@ -181,12 +182,12 @@ button:hover{
     display: flex;
     flex-direction: column;
     background-color: rgba(75, 75, 75, 0.167);
-    width: 500px;
     height: 100dvh;
     margin: 0 auto;
     font-size: larger;
     padding: 10px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 #cart-list {
@@ -280,4 +281,24 @@ body.dark .meal-card p {
 body.dark .bottom-nav {
     background: #2a2a2a;
     border-top: 1px solid #444;
+}
+
+#btn-logIn {
+    margin-top: 20px
+}
+
+.account-type {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.account-type label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 15px 20px;
+    scale: 1.1
 }

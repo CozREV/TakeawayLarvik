@@ -87,7 +87,7 @@ function logInView() {
                 type="password" 
                 placeholder="Passord"
                 oninput="modell.viewstate.logIn.password = this.value">
-            <button onclick="logIn()">Logg inn</button>
+            <button id="btn-logIn" onclick="logIn()">Logg inn</button>
         </div>
 
         <div class="bottom-nav">
@@ -126,13 +126,13 @@ function registerView() {
 
             <div class="account-type">
                 <label>
-                    <input type="radio" name="accountType" value="customer"
+                    <input class=".inp-mid" type="radio" name="accountType" value="customer"
                         onchange="modell.viewstate.createUser.isCompany = false"
                         checked>
                     Kunde
                 </label>
                 <label>
-                    <input type="radio" name="accountType" value="company"
+                    <input class=".inp-mid" type="radio" name="accountType" value="company"
                         onchange="modell.viewstate.createUser.isCompany = true">
                     Bedrift
                 </label>
