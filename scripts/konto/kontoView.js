@@ -160,10 +160,10 @@ function companyView() {
             <h1>Konto</h1>
             <button onclick="changeView('Home')">&#8592;</button>
             <h1>${user.name}</h1>
-        </div>
+    </div>
 
         <div class="account-content">
-            <div class="comapny-">
+            <div class="company-nav">
                 <button onclick="showAddFood()">🍕 Legg til mat</button>
                 <button onclick="showRestaurantControl()">🏪 Restaurant</button>
             </div>

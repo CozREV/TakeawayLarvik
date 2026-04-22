@@ -4,9 +4,6 @@ function updateView(){
     if(modell.app.currentView === "Home"){
         html = homeView();
     }
-    else if(modell.app.currentView === "restaurant"){
-        html = restaurantView();
-    }
     else if(modell.app.currentView === "Account"){
         html = accountView();
     }
@@ -15,6 +12,12 @@ function updateView(){
     }
     else if(modell.app.currentView === "Cart"){
         html = cartView.render();
+    }
+    else if(modell.app.currentView === "Restaurant") {
+        html = restaurantView()
+    }
+    else if(modell.app.currentView === "regRestaurant") {
+        html = regRestaurantView()
     }
 
     document.getElementById("main").innerHTML = html
