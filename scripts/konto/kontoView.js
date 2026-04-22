@@ -165,7 +165,7 @@ function companyView() {
         <div class="account-content">
             <div class="comapny-">
                 <button onclick="showAddFood()">🍕 Legg til mat</button>
-                <button onclick="showRestaurantControl()">🏪 Kontroller restaurant</button>
+                <button onclick="showRestaurantControl()">🏪 Restaurant</button>
             </div>
 
             <button onclick="logOut()">Logg ut</button>
