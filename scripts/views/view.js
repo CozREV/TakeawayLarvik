@@ -22,6 +22,9 @@ function updateView(){
         html = betalingView();
 
     }
+    else if(modell.app.currentView === "Bekreftelse"){
+    html = betalingBekreftelsView();
+}
 
     document.getElementById("main").innerHTML = html
 

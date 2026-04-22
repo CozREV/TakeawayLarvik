@@ -47,4 +47,27 @@ function betalingView() {
         </div>
     `;
 }
+
+
+
+function betalingBekreftelsView() {
+    const kode = "#" + Math.random().toString(36).substring(2, 9).toUpperCase();
+    
+    return /*html*/ `
+        <h1 class="logo-title">Takeaway Larvik</h1>
+
+        <div class="betaling-bekreftelse">
+            <h2>Betalings bekreftelse</h2>
+            <p>Betaling er gjennomført</p>
+            <div class="hake">✅</div>
+            <p class="kode">Kode: ${kode}</p>
+        </div>
+
+        <div class="bottom-nav">
+            <button onclick="changeView('Home')">Finn rett</button>
+            <button onclick="showCart()">Handlekurv</button>
+            <button onclick="showAccount()">Konto</button>
+        </div>
+    `;
+}
     updateView()

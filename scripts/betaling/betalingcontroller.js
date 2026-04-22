@@ -3,11 +3,12 @@ function gåTilBetaling() {
     updateView();
 }
 
+
+
 const betalingController = {
     bekreftBetaling() {
         modell.viewstate.cart = [];
-        alert("Betaling godkjent! Takk for din bestilling 🎉");
-        modell.app.currentView = "Home";
+        modell.app.currentView = "Bekreftelse";
         updateView();
     }
 }
