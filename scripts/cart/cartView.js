@@ -40,7 +40,7 @@ const cartView = {
 
                 <div id="cart-bottom">
                     <button id="btn-more"> Legg til mer</button>
-                    <button id="btn-pay"> Gå til betaling</button>
+                   <button id="btn-pay" onclick="gåTilBetaling()">Gå til betaling</button>
                  </div>
             </div>
         `

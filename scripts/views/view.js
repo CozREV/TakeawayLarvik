@@ -1,4 +1,3 @@
-
 function updateView(){
     let html = ''
     if(modell.app.currentView === "Home"){
@@ -16,6 +15,9 @@ function updateView(){
     else if(modell.app.currentView === "Cart"){
         html = cartView.render();
     }
+    else if(modell.app.currentView === "Betaling"){
+        html = betalingView();
+    }
 
     document.getElementById("main").innerHTML = html
 
@@ -23,3 +25,4 @@ function updateView(){
         renderMeals()
     }
 }
+
