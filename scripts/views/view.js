@@ -20,7 +20,6 @@ function updateView(){
     }
     else if(modell.app.currentView === "Betaling"){
         html = betalingView();
-
     }
     else if(modell.app.currentView === "Bekreftelse"){
     html = betalingBekreftelsView();

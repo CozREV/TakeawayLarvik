@@ -309,6 +309,10 @@ button:hover {
     margin-top: 20px;
 }
 
+#main-menu {
+    overflow: auto;
+}
+
 
 /* DARK MODE */
 body.dark {
