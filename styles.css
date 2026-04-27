@@ -7,13 +7,14 @@ body {
 }
 
 #main {
-    max-width: 500px;
     width: 100%;
-    min-height: 100dvh;
+    max-width: 500px;
+    height: 100dvh;
     margin: 0 auto;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 .header {
@@ -331,7 +332,9 @@ button:hover {
 }
 
 #main-menu {
-    overflow: auto;
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 60px;
 }
 
 #search-popup {
@@ -340,26 +343,6 @@ button:hover {
 
 #search-popup:not(:empty) {
     display: block;
-}
-
-@media (max-height: 800px) {
-    .meal-card img {
-        height: 70px;
-    }
-
-    .section {
-        margin-top: 10px;
-    }
-
-    .section h2 {
-        font-size: 16px;
-        margin-bottom: 2px;
-    }
-
-    #main-title {
-        font-size: xx-large;
-        margin: 10px;
-    }
 }
 
 
@@ -381,4 +364,47 @@ body.dark .meal-card p {
 body.dark .bottom-nav {
     background: #2a2a2a;
     border-top: 1px solid #444;
+}
+
+
+/* RESPONSIVE */
+html, body {
+    height: 100%;
+}
+
+#main {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#main-menu {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+
+.header {
+    flex-shrink: 0;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+#main-title {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    margin: 10px;
+}
+
+.meal-card {
+    min-width: clamp(120px, 35vw, 160px);
+}
+
+.meal-card img {
+    height: clamp(70px, 15vw, 110px);
+}
+
+.bottom-nav {
+    height: 60px;
+    padding: 8px;
 }
