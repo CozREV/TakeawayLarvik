@@ -42,15 +42,18 @@ function regRestaurantView() {
             <input
                 type="text"
                 placeholder="Restaurant Logo"
-                oninput="modell.viewstate.createRestaurant.restLogo = this.value">
+                oninput="modell.viewstate.createRestaurant.restLogo = this.value"
+                required>
             <input
                 type="text"
                 placeholder="Restaurant Navn"
-                oninput="modell.viewstate.createRestaurant.restName = this.value">
+                oninput="modell.viewstate.createRestaurant.restName = this.value"
+                required>
             <input
                 type="text"
                 placeholder="Restaurant Beskrivelse"
-                oninput="modell.viewstate.createRestaurant.desc = this.value">
+                oninput="modell.viewstate.createRestaurant.desc = this.value"
+                required>
             <button onclick="registerRestaurant()">Opprett Restaurant</button>
         </div>
 

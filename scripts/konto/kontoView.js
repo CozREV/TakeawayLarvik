@@ -110,19 +110,23 @@ function registerView() {
             <input
                 type="text"
                 placeholder="Navn"
-                oninput="modell.viewstate.createUser.name = this.value">
+                oninput="modell.viewstate.createUser.name = this.value"
+                required>
             <input
                 type="email"
                 placeholder="Email"
-                oninput="modell.viewstate.createUser.email = this.value">
+                oninput="modell.viewstate.createUser.email = this.value"
+                required>
             <input
-                type="tel"
+                type="number"
                 placeholder="Telefonnummer"
-                oninput="modell.viewstate.createUser.phoneNr = this.value">
+                oninput="modell.viewstate.createUser.phoneNr = this.value"
+                required>
             <input
                 type="password"
                 placeholder="Passord"
-                oninput="modell.viewstate.createUser.password = this.value">
+                oninput="modell.viewstate.createUser.password = this.value"
+                required>
 
             <div class="account-type">
                 <label>
