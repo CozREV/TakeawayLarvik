@@ -338,6 +338,22 @@ button:hover {
     display: block;
 }
 
+@media (max-width: 500px) {
+    #main {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .meal-card {
+        min-width: 130px;
+    }
+
+    .bottom-nav {
+        padding: 8px;
+    }
+}
+
 
 /* DARK MODE */
 body.dark {
