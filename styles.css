@@ -11,7 +11,7 @@ body {
     width: 100%;
     min-height: 100dvh;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -23,7 +23,6 @@ body {
 
 .section {
     margin-top: 20px;
-    padding: 0 10px;
 }
 
 .section h2 {
@@ -341,6 +340,26 @@ button:hover {
 
 #search-popup:not(:empty) {
     display: block;
+}
+
+@media (max-height: 800px) {
+    .meal-card img {
+        height: 70px;
+    }
+
+    .section {
+        margin-top: 10px;
+    }
+
+    .section h2 {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    #main-title {
+        font-size: xx-large;
+        margin: 10px;
+    }
 }
 
 
