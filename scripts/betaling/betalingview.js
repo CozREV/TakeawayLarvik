@@ -14,7 +14,7 @@ function payView() {
         </div>
 
         <div class="payment-content">
-            <div class="payment-metoder">
+            <div class="payment-methods">
                 <label>
                     <input type="radio" name="betaling" value="visa">
                     Visa
@@ -56,11 +56,11 @@ function paymentConfirmedView() {
     return /*html*/ `
         <h1 class="logo-title">Takeaway Larvik</h1>
 
-        <div class="betaling-bekreftelse">
+        <div class="payment-confirmation">
             <h2>Betalings bekreftelse</h2>
             <p>Betaling er gjennomført</p>
-            <div class="hake">✅</div>
-            <p class="kode">Kode: ${kode}</p>
+            <div class="checkmark">✅</div>
+            <p class="code">Kode: ${kode}</p>
         </div>
 
         <div class="bottom-nav">

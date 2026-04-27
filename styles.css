@@ -145,6 +145,18 @@ body {
     margin: auto 0px;
 }
 
+.payment-content, .payment-confirmation {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 175px 0px 0px 0px;
+    font-size: larger;
+}
+
+.payment-content button {
+    margin: auto;
+}
+
 
 /* DESIGN */
 #main-title, .logo-title {
