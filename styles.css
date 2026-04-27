@@ -7,6 +7,7 @@ body {
 
 #main {
     max-width: 500px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 }
@@ -155,6 +156,10 @@ body {
 
 .payment-content button {
     margin: auto;
+}
+
+.header-snd {
+    text-align: end;
 }
 
 
@@ -323,6 +328,14 @@ button:hover {
 
 #main-menu {
     overflow: auto;
+}
+
+#search-popup {
+    display: none;
+}
+
+#search-popup:not(:empty) {
+    display: block;
 }
 
 
