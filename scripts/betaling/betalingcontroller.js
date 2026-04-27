@@ -1,4 +1,4 @@
-function gåTilBetaling() {
+function goToPay() {
     modell.app.currentView = "Betaling";
     updateView();
 }
@@ -6,7 +6,7 @@ function gåTilBetaling() {
 
 
 const betalingController = {
-    bekreftBetaling() {
+    confirmPayment() {
         modell.viewstate.cart = [];
         modell.app.currentView = "Bekreftelse";
         updateView();

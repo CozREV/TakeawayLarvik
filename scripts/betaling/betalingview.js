@@ -1,6 +1,6 @@
 
   updateView()
-function betalingView() {
+function payView() {
     const total = modell.viewstate.cart.reduce((sum, item) => {
         const product = modell.data.products.find(p => p.id === item.productId);
         return sum + (product.price * item.quantity);
@@ -13,8 +13,8 @@ function betalingView() {
             <h1>Betaling</h1>
         </div>
 
-        <div class="betaling-content">
-            <div class="betaling-metoder">
+        <div class="payment-content">
+            <div class="payment-metoder">
                 <label>
                     <input type="radio" name="betaling" value="visa">
                     Visa
@@ -35,7 +35,7 @@ function betalingView() {
 
             <h2>Totalt: ${total} kr</h2>
 
-            <button onclick="betalingController.bekreftBetaling()">
+            <button onclick="betalingController.confirmPayment()">
                 Betal
             </button>
         </div>
@@ -50,7 +50,7 @@ function betalingView() {
 
 
 
-function betalingBekreftelsView() {
+function paymentConfirmedView() {
     const kode = "#" + Math.random().toString(36).substring(2, 9).toUpperCase();
     
     return /*html*/ `

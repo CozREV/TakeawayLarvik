@@ -39,8 +39,8 @@ const cartView = {
                 <p id="cart-total">Totalt: ${total} kr</p>
 
                 <div id="cart-bottom">
-                    <button id="btn-more"> Legg til mer</button>
-                   <button id="btn-pay" onclick="gåTilBetaling()">Gå til betaling</button>
+                    <button id="btn-more" onclick="changeView('Home')"> Legg til mer</button>
+                   <button id="btn-pay" onclick="goToPay()">Gå til betaling</button>
                  </div>
             </div>
         `

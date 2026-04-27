@@ -19,10 +19,10 @@ function updateView(){
         html = regRestaurantView()
     }
     else if(modell.app.currentView === "Betaling"){
-        html = betalingView();
+        html = payView();
     }
     else if(modell.app.currentView === "Bekreftelse"){
-    html = betalingBekreftelsView();
+        html = paymentConfirmedView();
 }
 
     document.getElementById("main").innerHTML = html
