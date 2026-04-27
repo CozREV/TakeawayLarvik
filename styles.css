@@ -358,37 +358,3 @@ body.dark .bottom-nav {
     background: #2a2a2a;
     border-top: 1px solid #444;
 }
-
-@media (max-height: 600px) {
-    #main-title {
-        font-size: x-large;
-        margin: 5px;
-    }
-
-    .header {
-        margin-bottom: 5px;
-    }
-
-    .section {
-        margin-top: 5px;
-    }
-
-    .section h2 {
-        font-size: 0.9rem;
-        margin-bottom: 2px;
-    }
-
-    .section p {
-        font-size: 0.75rem;
-        margin: 0;
-    }
-
-    .meal-card img {
-        height: 70px;
-    }
-
-    .meal-card p {
-        font-size: 0.75rem;
-        padding: 4px;
-    }
-}
