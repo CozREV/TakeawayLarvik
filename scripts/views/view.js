@@ -23,7 +23,11 @@ function updateView(){
     }
     else if(modell.app.currentView === "Bekreftelse"){
         html = paymentConfirmedView();
-}
+    }
+
+  else if(modell.app.currentView === "LeggTilMat"){
+    html = leggTilMatView();
+   } 
 
     document.getElementById("main").innerHTML = html
 

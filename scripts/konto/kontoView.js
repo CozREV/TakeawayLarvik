@@ -168,7 +168,7 @@ function companyView() {
 
         <div class="account-content">
             <div class="company-nav">
-                <button onclick="showAddFood()">🍕 Legg til mat</button>
+                <button onclick="showLeggTilMat()">🍕 Legg til mat</button>
                 <button onclick="showRestaurantControl()">🏪 Restaurant</button>
             </div>
 

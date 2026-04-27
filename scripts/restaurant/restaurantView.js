@@ -10,7 +10,6 @@ function showRestaurantControl() {
     }
 }
 
-
 function restaurantView() {
     const restaurant = modell.data.restaurant.find(r => r.userId === modell.app.logInId)
 
@@ -22,11 +21,18 @@ function restaurantView() {
         </div>
 
         <div class="restaurant-content">
+            <img src="${restaurant.restLogo}" 
+                alt="Restaurant logo"
+                style="width: 100px; height: 100px; border-radius: 50%">
             <h2>${restaurant.restName}</h2>
             <p>${restaurant.desc}</p>
         </div>
 
-
+        <div class="bottom-nav">
+            <button onclick="changeView('Home')">Finn rett</button>
+            <button onclick="showCart()">Handlekurv</button>
+            <button onclick="showAccount()">Konto</button>
+        </div>
     `
 }
 
@@ -57,8 +63,38 @@ function regRestaurantView() {
             <button onclick="registerRestaurant()">Opprett Restaurant</button>
         </div>
 
-        <div>
+        <div class="bottom-nav">
+            <button onclick="changeView('Home')">Finn rett</button>
+            <button onclick="showCart()">Handlekurv</button>
+            <button onclick="showAccount()">Konto</button>
         </div>
     `
 }
+function leggTilMatView() {
+    return /*html*/ `
+        <h1 class="logo-title">Takeaway Larvik</h1>
+        <div class="header">
+            <button onclick="showRestaurantControl()">&#8592;</button>
+            <h1>Legg til mat</h1>
+        </div>
 
+        <div class="restaurant-content">
+            <input type="text" placeholder="Matnavn"
+                oninput="modell.viewstate.createProduct.title = this.value">
+            <input type="text" placeholder="Bilde URL"
+                oninput="modell.viewstate.createProduct.picture = this.value">
+            <input type="number" placeholder="Pris"
+                oninput="modell.viewstate.createProduct.price = this.value">
+            <input type="text" placeholder="Ingredienser"
+                oninput="modell.viewstate.createProduct.ingredients = this.value">
+
+            <button onclick="leggTilMat()">Legg til</button>
+        </div>
+
+        <div class="bottom-nav">
+            <button onclick="changeView('Home')">Finn rett</button>
+            <button onclick="showCart()">Handlekurv</button>
+            <button onclick="showAccount()">Konto</button>
+        </div>
+    `
+}
