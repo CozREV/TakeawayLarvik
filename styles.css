@@ -3,18 +3,13 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
-    overflow-x: hidden;
 }
 
 #main {
-    width: 100%;
     max-width: 500px;
-    height: 100dvh;
+    width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-sizing: border-box;
+    padding: 0;
 }
 
 .header {
@@ -332,9 +327,7 @@ button:hover {
 }
 
 #main-menu {
-    flex: 1;
-    overflow-y: auto;
-    padding-bottom: 60px;
+    overflow: auto;
 }
 
 #search-popup {
@@ -366,45 +359,36 @@ body.dark .bottom-nav {
     border-top: 1px solid #444;
 }
 
+@media (max-height: 700px) {
+    #main-title {
+        font-size: x-large;
+        margin: 5px;
+    }
 
-/* RESPONSIVE */
-html, body {
-    height: 100%;
-}
+    .header {
+        margin-bottom: 5px;
+    }
 
-#main {
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
+    .section {
+        margin-top: 5px;
+    }
 
-#main-menu {
-    flex: 1;
-    overflow-y: auto;
-    padding-bottom: 60px;
-}
+    .section h2 {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
 
-.header {
-    flex-shrink: 0;
-    padding: 10px;
-    margin-bottom: 0;
-}
+    .section p {
+        font-size: 0.75rem;
+        margin: 0;
+    }
 
-#main-title {
-    font-size: clamp(1.5rem, 6vw, 3rem);
-    margin: 10px;
-}
+    .meal-card img {
+        height: 70px;
+    }
 
-.meal-card {
-    min-width: clamp(120px, 35vw, 160px);
-}
-
-.meal-card img {
-    height: clamp(70px, 15vw, 110px);
-}
-
-.bottom-nav {
-    height: 60px;
-    padding: 8px;
+    .meal-card p {
+        font-size: 0.75rem;
+        padding: 4px;
+    }
 }
