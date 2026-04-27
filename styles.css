@@ -3,13 +3,17 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
+    overflow-x: hidden;
 }
 
 #main {
     max-width: 500px;
     width: 100%;
+    min-height: 100dvh;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .header {
@@ -19,6 +23,7 @@ body {
 
 .section {
     margin-top: 20px;
+    padding: 0 10px;
 }
 
 .section h2 {
@@ -336,22 +341,6 @@ button:hover {
 
 #search-popup:not(:empty) {
     display: block;
-}
-
-@media (max-width: 500px) {
-    #main {
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    .meal-card {
-        min-width: 130px;
-    }
-
-    .bottom-nav {
-        padding: 8px;
-    }
 }
 
 
