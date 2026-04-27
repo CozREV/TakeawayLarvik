@@ -359,7 +359,7 @@ body.dark .bottom-nav {
     border-top: 1px solid #444;
 }
 
-@media (max-height: 700px) {
+@media (max-height: 600px) {
     #main-title {
         font-size: x-large;
         margin: 5px;
