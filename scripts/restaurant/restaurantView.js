@@ -59,11 +59,16 @@ function regRestaurantView() {
         </div>
 
         <div class="restaurant-content">
-            <input
-                type="text"
-                placeholder="Restaurant Logo"
-                oninput="modell.viewstate.createRestaurant.restLogo = this.value"
-                required>
+            <label class="file-upload">
+                📷 Velg bilde
+                <input type="file" accept="image/*"
+                    onchange="
+                        const file = this.files[0];
+                        const reader = new FileReader();
+                        reader.onload = e => modell.viewstate.createRestaurant.restLogo = e.target.result;
+                        reader.readAsDataURL(file);
+                    ">
+            </label>
             <input
                 type="text"
                 placeholder="Restaurant Navn"
@@ -84,6 +89,7 @@ function regRestaurantView() {
         </div>
     `
 }
+
 function addFoodView() {
     return /*html*/ `
         <h1 class="logo-title">Takeaway Larvik</h1>
@@ -95,8 +101,16 @@ function addFoodView() {
         <div class="restaurant-content">
             <input type="text" placeholder="Matnavn"
                 oninput="modell.viewstate.createProduct.title = this.value">
-            <input type="text" placeholder="Bilde URL"
-                oninput="modell.viewstate.createProduct.picture = this.value">
+            <label class="file-upload">
+                📷 Velg matbilde
+                <input type="file" accept="image/*"
+                    onchange="
+                        const file = this.files[0];
+                        const reader = new FileReader();
+                        reader.onload = e => modell.viewstate.createProduct.picture = e.target.result;
+                        reader.readAsDataURL(file);
+                    ">
+            </label>
             <input type="number" placeholder="Pris"
                 oninput="modell.viewstate.createProduct.price = this.value">
             <input type="text" placeholder="Ingredienser"

@@ -377,8 +377,11 @@ body.dark .bottom-nav {
 .restaurant-menu {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
     gap: 12px;
     padding: 10px 0;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
 }
 
 .restaurant-menu::-webkit-scrollbar {
@@ -389,7 +392,21 @@ body.dark .bottom-nav {
     border: none !important;
     font-size: 14px !important;
     font-weight: normal !important;
-    color: gray;
+    color: rgb(0, 0, 0);
     padding: 5px !important;
     width: auto !important;
+}
+
+.file-upload {
+    display: block;
+    background: #ff6b00;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.file-upload input {
+    display: none;
 }
