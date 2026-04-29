@@ -27,7 +27,7 @@ function addFood() {
     };
     
     modell.data.products.push(product);
-    modell.app.currentView = "Home";
+    modell.app.currentView = "Restaurant";
     updateView();
     
 }
