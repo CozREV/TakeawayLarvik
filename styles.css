@@ -360,3 +360,16 @@ body.dark .bottom-nav {
     background: #2a2a2a;
     border-top: 1px solid #444;
 }
+
+
+.restaurant-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.restaurant-menu .meal-card {
+    width: 150px;
+    text-align: center;
+}

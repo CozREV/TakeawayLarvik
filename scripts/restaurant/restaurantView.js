@@ -12,20 +12,31 @@ function showRestaurantControl() {
 
 function restaurantView() {
     const restaurant = modell.data.restaurant.find(r => r.userId === modell.app.logInId)
+    const products = modell.data.products.filter(p => p.restaurantId === restaurant.id)
 
     return /*html*/ `
+        <h1 class="logo-title">Takeaway Larvik</h1>
         <div class="header">
-            <h1 class="logo-title">Takeaway Larvik</h1>
+            <button onclick="showAccount()">&#8592;</button>
             <h1>Restaurant</h1>
-            <button onclick="changeView('Home')">&#8592;</button>
         </div>
 
         <div class="restaurant-content">
             <img src="${restaurant.restLogo}" 
-                alt="Restaurant logo"
-                style="width: 100px; height: 100px; border-radius: 50%">
+                style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover">
             <h2>${restaurant.restName}</h2>
             <p>${restaurant.desc}</p>
+        </div>
+
+        <div class="restaurant-menu">
+            <h3>Din meny:</h3>
+            ${products.map(p => `
+                <div class="meal-card">
+                    <img src="${p.picture}" style="width: 80px; height: 80px">
+                    <p>${p.title}</p>
+                    <p>${p.price} kr</p>
+                </div>
+            `).join("")}
         </div>
 
         <div class="bottom-nav">
