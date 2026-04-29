@@ -36,8 +36,11 @@ function renderMeals() {
     const html = meals.map(m => `
         <div class="meal-card">
             <img src="${m.picture}">
-            <p>${m.title}</p>
-        </div>
+            <div class="meal-card-bottom">
+                <p>${m.title}</p>
+                <button onclick="cartController.addToCart(${m.id})">Bestill</button>
+            </div>
+        </div>  
     `).join("")
 
     document.getElementById("meals").innerHTML = html
@@ -93,8 +96,11 @@ function filterMeals() {
     const html = products.map(m => `
         <div class="meal-card">
             <img src="${m.picture}">
-            <p>${m.title}</p>
-        </div>
+            <div class="meal-card-bottom">
+                <p>${m.title}</p>
+                <button onclick="cartController.addToCart(${m.id})">Bestill</button>
+            </div>
+        </div>  
     `).join("")
 
     document.getElementById("meals").innerHTML = html

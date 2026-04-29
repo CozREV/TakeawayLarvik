@@ -192,15 +192,6 @@ body {
     font-size: 14px;
 }
 
-#meals div,
-#daily div {
-    background: white;
-    padding: 12px;
-    border-radius: 12px;
-    margin-top: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
 .meal-card {
     min-width: 160px;
     flex-shrink: 0;
@@ -208,6 +199,11 @@ body {
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 0px 2px black;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .meal-card img {
@@ -216,8 +212,14 @@ body {
     object-fit: cover;
 }
 
-.meal-card p {
+.meal-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 8px;
+}
+
+.meal-card p {
     font-weight: bold;
     font-size: 14px;
 }
