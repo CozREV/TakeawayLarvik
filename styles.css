@@ -373,3 +373,23 @@ body.dark .bottom-nav {
     width: 150px;
     text-align: center;
 }
+
+.restaurant-menu {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.restaurant-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.rest-desc {
+    border: none !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    color: gray;
+    padding: 5px !important;
+    width: auto !important;
+}

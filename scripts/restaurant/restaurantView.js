@@ -22,23 +22,26 @@ function restaurantView() {
         </div>
 
         <div class="restaurant-content">
-            <img src="${restaurant.restLogo}" 
-                style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover">
+            <div class="rest-logo">
+                <img src="${restaurant.restLogo}" 
+                    style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover">
+            </div>
             <h2>${restaurant.restName}</h2>
-            <p>${restaurant.desc}</p>
+            <p class="rest-desc">${restaurant.desc}</p>
+                
+            <h3>Din meny</h3>
+            <div class="restaurant-menu">
+                ${products.map(p => `
+                    <div class="meal-card">
+                        <img src="${p.picture}">
+                        <div class="meal-card-bottom">
+                            <p>${p.title}</p>
+                        </div>
+                    </div>  
+                `).join("")}
+            </div>
         </div>
-
-        <div class="restaurant-menu">
-            <h3>Din meny:</h3>
-            ${products.map(p => `
-                <div class="meal-card">
-                    <img src="${p.picture}" style="width: 80px; height: 80px">
-                    <p>${p.title}</p>
-                    <p>${p.price} kr</p>
-                </div>
-            `).join("")}
-        </div>
-
+                    
         <div class="bottom-nav">
             <button onclick="changeView('Home')">Finn rett</button>
             <button onclick="showCart()">Handlekurv</button>
