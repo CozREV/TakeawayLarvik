@@ -26,7 +26,7 @@ function updateView(){
     }
 
   else if(modell.app.currentView === "LeggTilMat"){
-    html = leggTilMatView();
+    html = addFoodView();
    } 
 
     document.getElementById("main").innerHTML = html

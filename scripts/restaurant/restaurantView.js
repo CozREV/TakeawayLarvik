@@ -70,7 +70,7 @@ function regRestaurantView() {
         </div>
     `
 }
-function leggTilMatView() {
+function addFoodView() {
     return /*html*/ `
         <h1 class="logo-title">Takeaway Larvik</h1>
         <div class="header">
@@ -88,7 +88,7 @@ function leggTilMatView() {
             <input type="text" placeholder="Ingredienser"
                 oninput="modell.viewstate.createProduct.ingredients = this.value">
 
-            <button onclick="leggTilMat()">Legg til</button>
+            <button onclick="addFood()">Legg til</button>
         </div>
 
         <div class="bottom-nav">
