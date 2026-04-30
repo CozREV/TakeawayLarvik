@@ -224,7 +224,8 @@ const modell = {
         //     }
 
         // }
-    ],
+        ],
+        
         drinks: [
             {id: 1, name: "Cola", price: 89},
             {id: 2, name: "Kola", price: 59},
