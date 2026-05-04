@@ -35,7 +35,7 @@ function restaurantView() {
                     <div class="meal-card">
                         <img src="${p.picture}">
                         <div class="meal-card-bottom">
-                            <p>${p.title}</p>
+                            <p id="middle">${p.title}</p>
                         </div>
                     </div>  
                 `).join("")}

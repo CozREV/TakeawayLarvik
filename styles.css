@@ -381,6 +381,11 @@ body.dark .bottom-nav {
     justify-content: center;
 }
 
+#middle {
+    display: flex;
+    justify-content: center;
+}
+
 .restaurant-menu {
     display: flex;
     overflow-x: auto;
