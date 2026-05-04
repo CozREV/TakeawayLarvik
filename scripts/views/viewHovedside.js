@@ -80,18 +80,14 @@ function filterMeals() {
 
     if (search) {
         products = products.filter(p => p.title.toLowerCase().includes(search.toLowerCase()))
-        restaurants = restaurants.filter(r => r.restName.toLowerCase().includes(search.toLocaleLowerCase()))
+        restaurants = restaurants.filter(r => r.restName.toLowerCase().includes(search.toLowerCase()))
+        const popupHtml = restaurants.map(r => `
+            <div class="popup-item"><p>${r.restName}</p></div>
+        `).join("")
+        document.getElementById("search-popup").innerHTML = popupHtml
     } else {
         document.getElementById("search-popup").innerHTML = ""
-        return
     }
-
-
-    const popupHtml = restaurants.map(r => `
-            <div class="popup-item">
-                <p>${r.restName}</p>
-            </div>
-        `).join("")
 
     const html = products.map(m => `
         <div class="meal-card">
@@ -105,7 +101,6 @@ function filterMeals() {
 
     document.getElementById("meals").innerHTML = html
     document.getElementById("daily").innerHTML = html
-    document.getElementById("search-popup").innerHTML = popupHtml
 }
 
 function toggleDarkMode() {

@@ -216,128 +216,117 @@ const modell = {
 
         products: [
              {
-             id: 1,
-             restaurantId: 2,
-             title: "Hamburger",
-             picture: "picture/Hamburger.jpg",
-             price: 149,
-             allergiesId: [8],
-             ingredients: "",
-             drinkId: [0],
-             ratings: [],
-             stats: {
-                 week: 0,
-                 month: 0,
-                 year: 0
-             }
-
-         },
-    
-         {
-             id: 2,
-             restaurantId: 1,
-             title: "Pizza",
-             picture: "picture/pizza.jpg",
-             price: 149,
-             allergiesId: [8, 3],
-             ingredients: "",
-             drinkId: [0],
-             ratings: [],
-             stats: {
-                 week: 0,
-                 month: 0,
-                 year: 0
-             }
-
-         },
-    
-         {
-             id: 3,
-             restaurantId: 3,
-             title: "Pasta",
-             picture: "picture/pasta.jpg",
-             price: 149,
-             allergiesId: [8],
-             ingredients: "",
-             drinkId: [0],
-             ratings: [],
-             stats: {
-                 week: 0,
-                 month: 0,
-                 year: 0
-             }
-
-         },
-    
-         {
-             id: 4,
-             restaurantId: 1,
-             title: "Mozzarella",
-             picture: "picture/pizzaMoz.jpg",
-             price: 149,
-             allergiesId: [8, 3],
-             ingredients: "",
-             drinkId: [0],
-             ratings: [],
-             stats: {
-                 week: 0,
-                 month: 0,
-                 year: 0
-             }
-
-         },
-        
-         {
-             id: 5,
-             restaurantId: 3,
-             title: "Carbonara",
-             picture: "picture/carbonara.jpg",
-             price: 149,
-             allergiesId: [8],
-             ingredients: "",
-             drinkId: [0],
-             ratings: [],
-             stats: {
-                 week: 0,
-                 month: 0,
-                 year: 0
-             }
-
-         },
-         {
-             id: 6,
-             restaurantId: 2,
-             title: "Cheeseburger",
-             picture: "picture/dobbelcheese.jpg",
-             price: 149,
-             allergiesId: [8],
-             ingredients: "",
-             drinkId: [0],
-             ratings: [],
-             stats: {
-                 week: 0,
-                 month: 0,
-                 year: 0
-             }
-
-         },
-         {
-             id: 7,
-             restaurantId: 5,
-             title: "Bolognese",
-             picture: "picture/bolognese.jpg",
-             price: 149,
-             allergiesId: [8],
-             ingredients: "",
-             drinkId: [0],
-             ratings: [],
-             stats: {
-                 week: 0,
-                 month: 0,
-                 year: 0
-             }
-
-         },
+                id: 1,
+                restaurantId: 2,
+                title: "Hamburger",
+                picture: "picture/Hamburger.jpg",
+                price: 149,
+                allergiesId: [4, 7, 8, 10],  // Egg, Soya, Hvete, Sennep
+                ingredients: "",
+                drinkId: [0], 
+                ratings: [], 
+                stats: { 
+                    week: 0, 
+                    month: 0, 
+                    year: 0 
+                }
+            },
+            {
+                id: 2,
+                restaurantId: 1,
+                title: "Pizza",
+                picture: "picture/pizza.jpg",
+                price: 149,
+                allergiesId: [3, 8],  // Melk, Hvete
+                ingredients: "",
+                drinkId: [0], 
+                ratings: [], 
+                stats: { 
+                    week: 0, 
+                    month: 0, 
+                    year: 0 
+                }
+            },
+            {
+                id: 3,
+                restaurantId: 3,
+                title: "Pasta",
+                picture: "picture/pasta.jpg",
+                price: 149,
+                allergiesId: [4, 8],  // Egg, Hvete
+                ingredients: "",
+                drinkId: [0], 
+                ratings: [], 
+                stats: { 
+                    week: 0, 
+                    month: 0, 
+                    year: 0 
+                }
+            },
+            {
+                id: 4,
+                restaurantId: 1,
+                title: "Mozzarella",
+                picture: "picture/pizzaMoz.jpg",
+                price: 149,
+                allergiesId: [3, 8],  // Melk, Hvete
+                ingredients: "",
+                drinkId: [0], 
+                ratings: [], 
+                stats: { 
+                    week: 0, 
+                    month: 0, 
+                    year: 0 
+                }
+            },
+            {
+                id: 5,
+                restaurantId: 3,
+                title: "Carbonara",
+                picture: "picture/carbonara.jpg",
+                price: 149,
+                allergiesId: [3, 4, 8],  // Melk, Egg, Hvete
+                ingredients: "",
+                drinkId: [0], 
+                ratings: [], 
+                stats: { 
+                    week: 0, 
+                    month: 0, 
+                    year: 0 
+                }
+            },
+            {
+                id: 6,
+                restaurantId: 2,
+                title: "Cheeseburger",
+                picture: "picture/dobbelcheese.jpg",
+                price: 149,
+                allergiesId: [3, 4, 7, 8, 10],  // Melk, Egg, Soya, Hvete, Sennep
+                ingredients: "",
+                drinkId: [0], 
+                ratings: [], 
+                stats: { 
+                    week: 0, 
+                    month: 0, 
+                    year: 0 
+                }
+            },
+            {
+                id: 7,
+                restaurantId: 5,
+                title: "Bolognese",
+                picture: "picture/bolognese.jpg",
+                price: 149,
+                allergiesId: [3, 4, 8],  // Melk, Egg, Hvete
+                ingredients: "",
+                drinkId: [0], 
+                ratings: [], 
+                stats: { 
+                    week: 0, 
+                    month: 0, 
+                    year: 0 
+                }
+            }
         ],
         
         drinks: [
