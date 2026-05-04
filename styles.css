@@ -219,6 +219,12 @@ body {
     padding: 8px;
 }
 
+.restaurant-menu .meal-card-bottom {
+    justify-content: center;
+}
+
+
+
 .meal-card p {
     font-weight: bold;
     font-size: 14px;
@@ -372,6 +378,7 @@ body.dark .bottom-nav {
 .restaurant-menu .meal-card {
     width: 150px;
     text-align: center;
+    justify-content: center;
 }
 
 .restaurant-menu {

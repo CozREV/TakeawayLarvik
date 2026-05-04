@@ -25,7 +25,7 @@ const cartView = {
                             <div class="cart-item">
                                 <span class="cart-number">${index + 1}</span>
                                 <div class="cart-info">
-                                    <p class="cart-restaurant">Restaurant navn</p>
+                                    <p class="cart-restaurant">${modell.data.restaurant.find(r => r.id === product.restaurantId)?.restName || "Ukjent restaurant"}</p>
                                     <p class="cart-title">${product.title}</p>
                                     <p class="cart-content">${product.ingredients}</p>
                                     <button class="btn-click" onclick="cartController.removeProduct(${index})">Fjern</button>

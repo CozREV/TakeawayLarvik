@@ -115,115 +115,229 @@ const modell = {
              year: 0
            }
             },
+            { 
+            id: 4,
+            name: "Larvik Burger",
+            email: "larvik@burger.no",
+            phoneNr: "12345678",
+            password: "asd",
+            hasAdmin: false,
+            allergiesId: [],
+            isCompany: true,
+            stats: {
+             week: 0,
+             month: 0,
+             year: 0
+           }
+            },
+            { 
+            id: 5,
+            name: "Larvik Pasta",
+            email: "larvik@pasta.no",
+            phoneNr: "12345678",
+            password: "asd",
+            hasAdmin: false,
+            allergiesId: [],
+            isCompany: true,
+            stats: {
+             week: 0,
+             month: 0,
+             year: 0
+           }
+            },
+            { 
+            id: 6,
+            name: "Kunde",
+            email: "kunde@kunde.no",
+            phoneNr: "12345678",
+            password: "kunde",
+            hasAdmin: false,
+            allergiesId: [],
+            isCompany: false,
+            stats: {
+             week: 6,
+             month: 7,
+             year: 8
+           }
+            },
         ], 
 
 
-        restaurant: [{
+        restaurant: [
+            {
             id: 1,
-            restName: "",
-            restLogo: "",
-            desc: "",
+            userId: 3,
+            restName: "Larvik Pizza",
+            restLogo: "picture/larvikpizza.jpg",
+            desc: "Beste pizza i Larvik!",
             offers: [],
             stats: {
                 SalesByHour: {},
-                topProducts: {
-                    week: [],
-                    month: [],
-                    year: []
+                topProducts: { 
+                    week: [], 
+                    month: [], 
+                    year: [] 
+                    }
+                }
+            },
+            {
+            id: 2,
+            userId: 4,
+            restName: "Larvik Burger",
+            restLogo: "picture/LarvikBurger.jpg",
+            desc: "Saftige burgere siden 2020!",
+            offers: [],
+            stats: {
+                SalesByHour: {},
+                topProducts: { 
+                    week: [], 
+                    month: [], 
+                    year: [] 
+                    }
+                }
+            },
+            {
+            id: 3,
+            userId: 5,
+            restName: "Larvik Pasta",
+            restLogo: "picture/larvikPasta.jpg",
+            desc: "Hjemmelaget pasta hver dag!",
+            offers: [],
+            stats: {
+                SalesByHour: {},
+                topProducts: { 
+                    week: [], 
+                    month: [], 
+                    year: [] 
+                    }
                 }
             }
-        }], 
+            ], 
 
         products: [
-        //     {
-        //     id: 1,
-        //     restaurantId: 1,
-        //     title: "Hamburger",
-        //     picture: "picture/Hamburger.jpg",
-        //     price: 149,
-        //     allergiesId: [8],
-        //     ingredients: "",
-        //     drinkId: [0],
-        //     ratings: [],
-        //     stats: {
-        //         week: 0,
-        //         month: 0,
-        //         year: 0
-        //     }
+             {
+             id: 1,
+             restaurantId: 2,
+             title: "Hamburger",
+             picture: "picture/Hamburger.jpg",
+             price: 149,
+             allergiesId: [8],
+             ingredients: "",
+             drinkId: [0],
+             ratings: [],
+             stats: {
+                 week: 0,
+                 month: 0,
+                 year: 0
+             }
 
-        // },
+         },
     
-        // {
-        //     id: 2,
-        //     restaurantId: 1,
-        //     title: "Pizza",
-        //     picture: "picture/pizza.jpg",
-        //     price: 149,
-        //     allergiesId: [8, 3],
-        //     ingredients: "",
-        //     drinkId: [0],
-        //     ratings: [],
-        //     stats: {
-        //         week: 0,
-        //         month: 0,
-        //         year: 0
-        //     }
+         {
+             id: 2,
+             restaurantId: 1,
+             title: "Pizza",
+             picture: "picture/pizza.jpg",
+             price: 149,
+             allergiesId: [8, 3],
+             ingredients: "",
+             drinkId: [0],
+             ratings: [],
+             stats: {
+                 week: 0,
+                 month: 0,
+                 year: 0
+             }
 
-        // },
+         },
     
-        // {
-        //     id: 3,
-        //     restaurantId: 2,
-        //     title: "Pasta",
-        //     picture: "picture/pasta.jpg",
-        //     price: 149,
-        //     allergiesId: [8],
-        //     ingredients: "",
-        //     drinkId: [0],
-        //     ratings: [],
-        //     stats: {
-        //         week: 0,
-        //         month: 0,
-        //         year: 0
-        //     }
+         {
+             id: 3,
+             restaurantId: 3,
+             title: "Pasta",
+             picture: "picture/pasta.jpg",
+             price: 149,
+             allergiesId: [8],
+             ingredients: "",
+             drinkId: [0],
+             ratings: [],
+             stats: {
+                 week: 0,
+                 month: 0,
+                 year: 0
+             }
 
-        // },
+         },
     
-        // {
-        //     id: 4,
-        //     restaurantId: 3,
-        //     title: "Kebab",
-        //     picture: "picture/kebab.jpg",
-        //     price: 149,
-        //     allergiesId: [3, 8, 7, 4, 10],
-        //     ingredients: "",
-        //     drinkId: [0],
-        //     ratings: [],
-        //     stats: {
-        //         week: 0,
-        //         month: 0,
-        //         year: 0
-        //     }
+         {
+             id: 4,
+             restaurantId: 1,
+             title: "Mozzarella",
+             picture: "picture/pizzaMoz.jpg",
+             price: 149,
+             allergiesId: [8, 3],
+             ingredients: "",
+             drinkId: [0],
+             ratings: [],
+             stats: {
+                 week: 0,
+                 month: 0,
+                 year: 0
+             }
 
-        // },
+         },
         
-        // {
-        //     id: 5,
-        //     restaurantId: 4,
-        //     title: "Sushi",
-        //     picture: "picture/sushi.jpg",
-        //     price: 149,
-        //     allergiesId: [5, 7, 9],
-        //     ingredients: "",
-        //     drinkId: [0],
-        //     ratings: [],
-        //     stats: {
-        //         week: 0,
-        //         month: 0,
-        //         year: 0
-        //     }
+         {
+             id: 5,
+             restaurantId: 3,
+             title: "Carbonara",
+             picture: "picture/carbonara.jpg",
+             price: 149,
+             allergiesId: [8],
+             ingredients: "",
+             drinkId: [0],
+             ratings: [],
+             stats: {
+                 week: 0,
+                 month: 0,
+                 year: 0
+             }
 
-        // }
+         },
+         {
+             id: 6,
+             restaurantId: 2,
+             title: "Cheeseburger",
+             picture: "picture/dobbelcheese.jpg",
+             price: 149,
+             allergiesId: [8],
+             ingredients: "",
+             drinkId: [0],
+             ratings: [],
+             stats: {
+                 week: 0,
+                 month: 0,
+                 year: 0
+             }
+
+         },
+         {
+             id: 7,
+             restaurantId: 5,
+             title: "Bolognese",
+             picture: "picture/bolognese.jpg",
+             price: 149,
+             allergiesId: [8],
+             ingredients: "",
+             drinkId: [0],
+             ratings: [],
+             stats: {
+                 week: 0,
+                 month: 0,
+                 year: 0
+             }
+
+         },
         ],
         
         drinks: [
